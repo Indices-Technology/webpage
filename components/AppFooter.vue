@@ -13,11 +13,27 @@
               INDICES TECHNOLOGY LTD
             </div>
           </div>
-          <p class="text-slate-400 mb-6 leading-relaxed max-w-md text-sm sm:text-base">
-            Vertically integrated solutions for economic transformation across Africa. 
+          <p class="text-slate-400 mb-4 leading-relaxed max-w-md text-sm sm:text-base">
+            Vertically integrated solutions for economic transformation across Africa.
             Seven operational arms, one unified vision.
           </p>
-          
+
+          <!-- Company info -->
+          <div class="mb-5 space-y-1.5">
+            <p class="text-slate-500 text-xs font-semibold">RC7529506</p>
+            <p class="text-slate-500 text-xs leading-relaxed">1, Zion International School Plaza, Agingi,<br/>Jebba-Bassa, Plateau State, Nigeria</p>
+            <a href="tel:+2348066838217" class="text-blue-400 hover:text-blue-300 transition-colors text-xs font-medium block">+234 806 683 8217</a>
+          </div>
+
+          <!-- Nigeria Startup Act badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-green-700/40 bg-green-900/30 mb-5">
+            <span class="text-base">🇳🇬</span>
+            <div>
+              <p class="text-[8px] font-black text-green-400 uppercase tracking-widest leading-none">Nigeria Startup Act</p>
+              <p class="text-[8px] font-bold text-green-500 leading-none mt-0.5">Label Certified</p>
+            </div>
+          </div>
+
           <!-- Social Links -->
           <div class="flex gap-3">
             <a 
@@ -92,10 +108,10 @@
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/tech/styli" class="hover:text-pink-400 transition-colors inline-flex items-center gap-2">
+              <a href="https://stylex.indicestech.com" class="hover:text-pink-400 transition-colors inline-flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
-                Styli Commerce
-              </NuxtLink>
+                styleX Commerce
+              </a>
             </li>
           </ul>
 
@@ -112,8 +128,8 @@
               </a>
             </li>
             <li>
-              <a href="#" class="hover:text-blue-400 transition-colors inline-block">
-                Contact
+              <a href="tel:+2348066838217" class="hover:text-blue-400 transition-colors inline-block">
+                +234 806 683 8217
               </a>
             </li>
             <li>

@@ -37,10 +37,10 @@
               Axioms AI
             </span>
           </NuxtLink>
-          <NuxtLink to="/tech/styli" class="group flex items-center gap-2 hover:translate-y-[-2px] transition-all">
+          <NuxtLink to="https://stylex.indicestech.com/landing" class="group flex items-center gap-2 hover:translate-y-[-2px] transition-all">
             <span class="w-2 h-2 rounded-full bg-pink-500"></span>
             <span class="text-xs font-black tracking-widest uppercase hover:text-pink-600 transition-colors">
-              Styli
+              StyleX
             </span>
           </NuxtLink>
         </div>
@@ -146,12 +146,12 @@
                       Axioms AI
                     </NuxtLink>
                     <NuxtLink 
-                      to="/tech/styli" 
+                      to="https://stylex.indicestech.com/landing" 
                       class="flex items-center gap-3 text-lg font-bold hover:text-pink-600 transition-colors"
                       @click="mobileMenuOpen = false"
                     >
                       <span class="w-2 h-2 rounded-full bg-pink-500"></span>
-                      Styli
+                      StyleX
                     </NuxtLink>
                   </div>
                 </div>

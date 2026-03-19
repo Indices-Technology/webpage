@@ -25,7 +25,7 @@
               <span class="hidden sm:inline text-slate-300">•</span>
               <span>GDPR Compliant</span>
             </div>
-            <div class="text-xs text-slate-400">Trusted by 100+ Organizations</div>
+            <div class="text-xs text-slate-400">Trusted by 10+ Organizations</div>
           </div>
         </div>
       </section>
@@ -284,7 +284,7 @@ const matrix = [
     icon: '💻', 
     path: '/tech/axioms', 
     desc: 'Enterprise AI, FinTech platforms, and social commerce solutions.',
-    tags: ['Axioms AI', 'Styli', 'FinTech'],
+    tags: ['Axioms AI', 'styleX', 'FinTech'],
     borderColor: 'border-purple-100 hover:border-purple-500',
     iconBg: 'bg-purple-50 text-purple-600',
     arrowColor: 'text-purple-600',
