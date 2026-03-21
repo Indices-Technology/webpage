@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-slate-900 text-white">
+  <footer class="bg-slate-900 dark:bg-slate-950 text-white transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <!-- Main Footer Content -->
       <div class="py-12 sm:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -23,6 +23,7 @@
             <p class="text-slate-500 text-xs font-semibold">RC7529506</p>
             <p class="text-slate-500 text-xs leading-relaxed">1, Zion International School Plaza, Agingi,<br/>Jebba-Bassa, Plateau State, Nigeria</p>
             <a href="tel:+2348066838217" class="text-blue-400 hover:text-blue-300 transition-colors text-xs font-medium block">+234 806 683 8217</a>
+            <a href="mailto:contactindices@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors text-xs font-medium block">contactindices@gmail.com</a>
           </div>
 
           <!-- Nigeria Startup Act badge -->
@@ -34,32 +35,14 @@
             </div>
           </div>
 
-          <!-- Social Links -->
-          <div class="flex gap-3">
-            <a 
-              href="#" 
-              class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors text-sm"
-              aria-label="LinkedIn"
-            >
-              in
-            </a>
-            <a 
-              href="#" 
-              class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
-              aria-label="Twitter/X"
-            >
-              𝕏
-            </a>
-            <a 
-              href="#" 
-              class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors text-sm"
-              aria-label="Instagram"
-            >
-              IG
-            </a>
-          </div>
+          <!-- Social Links — URLs to be added when accounts are ready -->
+          <!-- <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors text-sm" aria-label="LinkedIn">in</a>
+            <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors" aria-label="Twitter/X">𝕏</a>
+            <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors text-sm" aria-label="Instagram">IG</a>
+          </div> -->
         </div>
-        
+
         <!-- Ecosystem Links -->
         <div>
           <h4 class="font-bold mb-4 text-sm tracking-wider uppercase">Ecosystem</h4>
@@ -96,8 +79,8 @@
             </li>
           </ul>
         </div>
-        
-        <!-- Platforms & Resources -->
+
+        <!-- Platforms & Company -->
         <div>
           <h4 class="font-bold mb-4 text-sm tracking-wider uppercase">Platforms</h4>
           <ul class="space-y-3 text-slate-400 text-sm mb-8">
@@ -118,29 +101,29 @@
           <h4 class="font-bold mb-4 text-sm tracking-wider uppercase">Company</h4>
           <ul class="space-y-3 text-slate-400 text-sm">
             <li>
-              <a href="#" class="hover:text-blue-400 transition-colors inline-block">
-                About Us
-              </a>
+              <NuxtLink to="/services" class="hover:text-blue-400 transition-colors inline-flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                Our Services
+              </NuxtLink>
             </li>
             <li>
-              <a href="#" class="hover:text-blue-400 transition-colors inline-block">
-                Careers
-              </a>
+              <NuxtLink to="/contact" class="hover:text-blue-400 transition-colors inline-block">
+                Contact Us
+              </NuxtLink>
             </li>
             <li>
               <a href="tel:+2348066838217" class="hover:text-blue-400 transition-colors inline-block">
                 +234 806 683 8217
               </a>
             </li>
-            <li>
-              <a href="#" class="hover:text-blue-400 transition-colors inline-block">
-                Investor Portal
-              </a>
-            </li>
+            <!-- Uncomment when pages are ready -->
+            <!-- <li><a href="#" class="hover:text-blue-400 transition-colors inline-block">About Us</a></li> -->
+            <!-- <li><a href="#" class="hover:text-blue-400 transition-colors inline-block">Careers</a></li> -->
+            <!-- <li><a href="#" class="hover:text-blue-400 transition-colors inline-block">Investor Portal</a></li> -->
           </ul>
         </div>
       </div>
-      
+
       <!-- Bottom Bar -->
       <div class="border-t border-slate-800 py-6 sm:py-8">
         <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
@@ -148,15 +131,11 @@
             © {{ currentYear }} Indices Technology LTD. All rights reserved.
           </p>
           <div class="flex flex-wrap justify-center gap-6 text-slate-500">
-            <a href="#" class="hover:text-blue-400 transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" class="hover:text-blue-400 transition-colors">
-              Terms of Service
-            </a>
-            <a href="#" class="hover:text-blue-400 transition-colors">
-              Cookie Policy
-            </a>
+            <!-- Uncomment when policy pages are ready -->
+            <!-- <a href="#" class="hover:text-blue-400 transition-colors">Privacy Policy</a> -->
+            <!-- <a href="#" class="hover:text-blue-400 transition-colors">Terms of Service</a> -->
+            <!-- <a href="#" class="hover:text-blue-400 transition-colors">Cookie Policy</a> -->
+            <NuxtLink to="/contact" class="hover:text-blue-400 transition-colors">Contact</NuxtLink>
           </div>
         </div>
       </div>

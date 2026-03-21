@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen selection:bg-blue-100">
+  <div class="flex flex-col min-h-screen selection:bg-blue-100 bg-white dark:bg-slate-950 transition-colors duration-300">
     <AppHeader />
 
     <main class="flex-grow">
@@ -15,19 +15,13 @@
 </template>
 
 <script setup lang="ts">
-/**
- * Component logic for the layout
- * Can be used for global scroll listeners or theme management
- */
 </script>
 
 <style>
-/* Smooth scrolling for anchor links (Strategy, Ecosystem, Impact) */
 html {
   scroll-behavior: smooth;
 }
 
-/* Ensure footer stays at the bottom on short pages */
 #__nuxt {
   height: 100%;
 }

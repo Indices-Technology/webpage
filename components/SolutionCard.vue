@@ -1,52 +1,52 @@
 <template>
-  <NuxtLink 
+  <NuxtLink
     :to="sector.path"
-    class="group relative overflow-hidden bg-white p-6 sm:p-8 rounded-2xl border-2 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-    :class="sector.borderColor"
+    class="group relative flex flex-col bg-white dark:bg-slate-800/70 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700/60 shadow-sm hover:shadow-xl dark:hover:shadow-slate-900/50 transition-all duration-300 hover:-translate-y-1"
   >
-    <!-- Icon -->
-    <div 
-      :class="[
-        'w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center text-2xl mb-4 sm:mb-6 shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-3',
-        sector.iconBg
-      ]"
-    >
-      {{ sector.icon }}
-    </div>
-    
-    <!-- Content -->
-    <div class="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
-      <h3 class="text-lg sm:text-xl font-black text-slate-900 leading-tight">
-        {{ sector.name }}
-      </h3>
-      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-        {{ sector.desc }}
-      </p>
-    </div>
-    
-    <!-- Tags -->
-    <div class="flex flex-wrap gap-2">
-      <span 
-        v-for="tag in sector.tags" 
-        :key="tag" 
-        class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 bg-slate-50 rounded-md text-slate-500 border border-slate-100"
-      >
-        {{ tag }}
-      </span>
-    </div>
+    <!-- Colored accent bar at top -->
+    <div class="h-0.5 w-full shrink-0" :class="sector.accentBg"></div>
 
-    <!-- Hover Arrow -->
-    <div 
-      class="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 opacity-0 group-hover:opacity-100 transition-all duration-300 text-xl sm:text-2xl" 
-      :class="sector.arrowColor"
-    >
-      →
-    </div>
+    <div class="p-5 sm:p-6 flex flex-col flex-1">
+      <!-- Icon + index -->
+      <div class="flex items-start justify-between mb-5">
+        <div
+          :class="[
+            'w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-xl sm:text-2xl shadow-sm transition-transform duration-300 group-hover:scale-110',
+            sector.iconBg
+          ]"
+        >
+          {{ sector.icon }}
+        </div>
+        <span class="text-xs font-black text-slate-200 dark:text-slate-700 tracking-wider select-none tabular-nums">
+          {{ sector.index }}
+        </span>
+      </div>
 
-    <!-- Top Right Badge -->
-    <div class="absolute top-3 sm:top-4 right-3 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-      <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white text-[10px] sm:text-xs font-bold">
-        {{ sector.index }}
+      <!-- Name + description -->
+      <div class="flex-1 mb-4 space-y-2">
+        <h3 class="text-base sm:text-[17px] font-black text-slate-900 dark:text-white leading-snug">
+          {{ sector.name }}
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+          {{ sector.desc }}
+        </p>
+      </div>
+
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-1.5 mb-5">
+        <span
+          v-for="tag in sector.tags"
+          :key="tag"
+          class="text-[10px] font-bold uppercase tracking-wide px-2.5 py-1 rounded-full bg-slate-50 dark:bg-slate-700/60 text-slate-400 dark:text-slate-500 border border-slate-100 dark:border-slate-700/80"
+        >
+          {{ tag }}
+        </span>
+      </div>
+
+      <!-- CTA row -->
+      <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700/50">
+        <span :class="['text-xs font-bold', sector.arrowColor]">Explore</span>
+        <span :class="['text-sm font-bold transition-transform duration-200 group-hover:translate-x-1', sector.arrowColor]">→</span>
       </div>
     </div>
   </NuxtLink>
@@ -65,6 +65,7 @@ defineProps({
         value.desc &&
         value.tags &&
         value.borderColor &&
+        value.accentBg &&
         value.iconBg &&
         value.arrowColor &&
         value.index
