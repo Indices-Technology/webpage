@@ -334,7 +334,7 @@ const matrix = [
     icon: '💻',
     path: '/tech/axioms',
     desc: 'Enterprise AI, FinTech platforms, and social commerce solutions.',
-    tags: ['Axioms AI', 'styleX', 'FinTech'],
+    tags: ['Axioms AI', 'marketx', 'FinTech'],
     borderColor: 'border-purple-100 hover:border-purple-500',
     accentBg: 'bg-purple-500',
     iconBg: 'bg-purple-50 text-purple-600',

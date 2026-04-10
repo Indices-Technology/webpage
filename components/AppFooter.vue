@@ -91,9 +91,9 @@
               </NuxtLink>
             </li>
             <li>
-              <a href="https://stylex.indicestech.com" class="hover:text-pink-400 transition-colors inline-flex items-center gap-2">
+              <a href="https://marketx.indicestech.com" class="hover:text-pink-400 transition-colors inline-flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
-                styleX Commerce
+                marketx Commerce
               </a>
             </li>
           </ul>

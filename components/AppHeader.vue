@@ -31,9 +31,9 @@
             <span class="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse"></span>
             <span class="text-[11px] font-black tracking-widest uppercase text-slate-600 dark:text-slate-300 group-hover:text-purple-600 transition-colors">Axioms AI</span>
           </NuxtLink>
-          <a href="https://stylex.indicestech.com" target="_blank" rel="noopener" class="group flex items-center gap-2 hover:-translate-y-px transition-all">
+          <a href="https://marketx.indicestech.com" target="_blank" rel="noopener" class="group flex items-center gap-2 hover:-translate-y-px transition-all">
             <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
-            <span class="text-[11px] font-black tracking-widest uppercase text-slate-600 dark:text-slate-300 group-hover:text-pink-600 transition-colors">styleX ↗</span>
+            <span class="text-[11px] font-black tracking-widest uppercase text-slate-600 dark:text-slate-300 group-hover:text-pink-600 transition-colors">marketx ↗</span>
           </a>
         </div>
         <div class="flex gap-5 text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-tight">
@@ -154,9 +154,9 @@
                   class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-purple-50 dark:hover:bg-purple-900/20 hover:text-purple-700 transition-colors">
                   <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>Axioms AI
                 </NuxtLink>
-                <a href="https://stylex.indicestech.com" target="_blank" rel="noopener" @click="mobileMenuOpen = false"
+                <a href="https://marketx.indicestech.com" target="_blank" rel="noopener" @click="mobileMenuOpen = false"
                   class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-pink-50 dark:hover:bg-pink-900/20 hover:text-pink-700 transition-colors">
-                  <span class="w-2 h-2 rounded-full bg-pink-500 shrink-0"></span>styleX ↗
+                  <span class="w-2 h-2 rounded-full bg-pink-500 shrink-0"></span>marketx ↗
                 </a>
               </div>
 
