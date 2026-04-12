@@ -108,6 +108,14 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Industrial Technology',
+  ogTitle: 'Industrial Technology — Indices Technology LTD',
+  description: 'Indices Industrial Technology arm delivers smart manufacturing, mining technology, robotics, renewable energy grids, and textile Industry 4.0 solutions across Africa.',
+  ogDescription: 'Smart manufacturing, robotics, renewable energy grids and Industry 4.0 — Indices Industrial Technology.',
+  ogUrl: 'https://indicestech.com/tech',
+})
+
 const techSectors = [
   {
     title: 'Mining Technology',

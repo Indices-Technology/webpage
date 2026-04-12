@@ -127,6 +127,14 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Axioms AI',
+  ogTitle: 'Axioms AI — Indices Technology LTD',
+  description: 'Axioms AI is the intelligence core of Indices Technology — offering RAG chatbots, predictive analytics, computer vision, document processing, and voice AI for African enterprises.',
+  ogDescription: 'RAG chatbots, predictive analytics, computer vision, and voice AI — Axioms AI powers the INDICES ecosystem.',
+  ogUrl: 'https://indicestech.com/tech/axioms',
+})
+
 const aiServices = [
   {
     title: 'Custom RAG Chatbot Development',

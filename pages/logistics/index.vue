@@ -118,6 +118,14 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  title: 'Logistics',
+  ogTitle: 'Logistics — Indices Technology LTD',
+  description: 'Indices Logistics arm delivers smart cold chain systems, fleet automation, customs technology, and warehouse robotics to modernise African supply chains.',
+  ogDescription: 'Smart cold chain, fleet automation, customs tech, and warehouse robotics — Indices Logistics.',
+  ogUrl: 'https://indicestech.com/logistics',
+})
+
 const logisticsStack = [
   { 
     title: 'Smart Cold Chain', 

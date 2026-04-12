@@ -25,6 +25,14 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Real Estate & Infrastructure',
+  ogTitle: 'Real Estate & Infrastructure — Indices Technology LTD',
+  description: 'Indices Real Estate & Infrastructure arm develops smart warehousing, agri-industrial parks, and tech hub facilities to anchor economic activity across Africa.',
+  ogDescription: 'Smart warehousing, agri-industrial parks, and tech hubs — Indices Real Estate & Infrastructure.',
+  ogUrl: 'https://indicestech.com/real-estate',
+})
+
 const estateSolutions = [
   { 
     title: 'Smart Warehousing', 

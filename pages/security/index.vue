@@ -120,6 +120,14 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  title: 'Security Services',
+  ogTitle: 'Security Services — Indices Technology LTD',
+  description: 'Indices Security Services arm provides industrial cybersecurity, physical asset defense, supply chain integrity, and IP & data sovereignty solutions for African enterprises.',
+  ogDescription: 'Industrial cybersecurity, physical defense, and supply chain integrity — Indices Security Services.',
+  ogUrl: 'https://indicestech.com/security',
+})
+
 const securityStack = [
   { 
     title: 'Industrial Cybersecurity', 

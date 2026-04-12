@@ -7,6 +7,22 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
   ],
+  app: {
+    head: {
+      htmlAttrs: { lang: 'en' },
+      titleTemplate: '%s — Indices Technology LTD',
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'apple-touch-icon', href: '/favicon.svg' },
+      ],
+      meta: [
+        { name: 'theme-color', content: '#2563eb' },
+        { name: 'color-scheme', content: 'light dark' },
+        { name: 'robots', content: 'index, follow' },
+      ],
+    },
+  },
   runtimeConfig: {
     // Server-only — never exposed to the browser
     mailUser: process.env.NUXT_MAIL_USER,

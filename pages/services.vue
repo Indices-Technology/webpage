@@ -182,9 +182,12 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  title: 'Services — Indices Technology LTD',
-  meta: [{ name: 'description', content: 'Digital transformation services: e-commerce, AI analytics, business systems, logistics tools and more — built for African businesses.' }]
+useSeoMeta({
+  title: 'Development Services',
+  ogTitle: 'Development Services — Indices Technology LTD',
+  description: 'Digital transformation services for African businesses: e-commerce, mobile apps, AI analytics, smart business systems, logistics tools, and custom software solutions.',
+  ogDescription: 'Digital transformation services for African businesses — from e-commerce and mobile apps to AI analytics and custom software.',
+  ogUrl: 'https://indicestech.com/services',
 })
 
 const trust = [

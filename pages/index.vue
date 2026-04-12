@@ -256,6 +256,14 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
+useSeoMeta({
+  title: 'Seven Arms, One Vision',
+  ogTitle: 'Indices Technology LTD — Seven Arms, One Vision',
+  description: 'A vertically integrated technology group operating across Industrial Tech, Agribusiness, Logistics, Security, Education, Outreach, and Software — powered by Axioms AI.',
+  ogDescription: 'Seven operational arms. One integrated ecosystem. Powered by Axioms AI.',
+  ogUrl: 'https://indicestech.com',
+})
+
 const currentSlide = ref(0)
 const autoplayInterval = ref(null)
 

@@ -126,9 +126,12 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  title: 'Contact Us — Indices Technology LTD',
-  meta: [{ name: 'description', content: 'Get in touch with Indices Technology. We respond within 24 hours.' }]
+useSeoMeta({
+  title: 'Contact Us',
+  ogTitle: 'Contact Indices Technology LTD',
+  description: 'Get in touch with Indices Technology LTD. RC7529506. Reach us at contactindices@gmail.com or +234 806 683 8217. We respond within 24 hours.',
+  ogDescription: 'Reach Indices Technology LTD — email, phone, or our contact form. We respond within 24 hours.',
+  ogUrl: 'https://indicestech.com/contact',
 })
 
 const form = reactive({

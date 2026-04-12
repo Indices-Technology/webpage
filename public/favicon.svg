@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none">
+  <!-- Background -->
+  <rect width="36" height="36" rx="7" fill="white"/>
+  <!-- TOP BAR — blue (T crossbar / I top bar). x offset = (36-28)/2 = 4 -->
+  <rect x="4"  y="0" width="8" height="8" rx="1.5" fill="#2563eb" opacity="0.45"/>
+  <rect x="14" y="0" width="8" height="8" rx="1.5" fill="#2563eb" opacity="0.80"/>
+  <rect x="24" y="0" width="8" height="8" rx="1.5" fill="#2563eb"/>
+  <!-- STEM -->
+  <rect x="14" y="11" width="8" height="8" rx="1.5" fill="#0f172a" opacity="0.70"/>
+  <rect x="14" y="21" width="8" height="8" rx="1.5" fill="#0f172a" opacity="0.55"/>
+  <!-- BOTTOM BAR -->
+  <rect x="4"  y="28" width="8" height="8" rx="1.5" fill="#0f172a" opacity="0.18"/>
+  <rect x="24" y="28" width="8" height="8" rx="1.5" fill="#0f172a" opacity="0.30"/>
+</svg>

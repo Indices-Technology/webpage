@@ -264,6 +264,14 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  title: 'Education & Training',
+  ogTitle: 'Education & Training — Indices Technology LTD',
+  description: 'Indices Education & Training arm offers vocational technical programmes, digital certifications, and agri-business school — building workforce capacity across Africa.',
+  ogDescription: 'Vocational training, digital certifications, and agri-business education — Indices Education & Training.',
+  ogUrl: 'https://indicestech.com/education',
+})
+
 const eduSolutions = [
   { 
     title: 'Vocational Technical (VoTech)', 

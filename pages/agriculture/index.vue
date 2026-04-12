@@ -102,6 +102,14 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  title: 'Agribusiness',
+  ogTitle: 'Agribusiness — Indices Technology LTD',
+  description: 'Indices Agribusiness arm brings smart ranching, biotech labs, drone NDVI crop analysis, and IoT cold chain management to transform African agriculture.',
+  ogDescription: 'Smart ranching, drone NDVI, biotech, and cold chain IoT — Indices Agribusiness arm.',
+  ogUrl: 'https://indicestech.com/agriculture',
+})
+
 const agriTechStack = [
   { 
     title: 'Smart Ranching', 

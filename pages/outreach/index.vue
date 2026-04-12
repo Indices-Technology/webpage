@@ -29,6 +29,14 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Outreach & Impact',
+  ogTitle: 'Outreach & Impact — Indices Technology LTD',
+  description: 'Indices Outreach & Impact arm drives community empowerment, strategic philanthropy, and digital evangelism to create lasting social value across Nigeria and Africa.',
+  ogDescription: 'Community empowerment, strategic philanthropy, and digital evangelism — Indices Outreach & Impact.',
+  ogUrl: 'https://indicestech.com/outreach',
+})
+
 const impactSolutions = [
   { 
     title: 'Community Empowerment', 
