@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "PowerShell(npm run build 2>&1)",
+      "PowerShell(npm install -D @iconify-json/lucide 2>&1)",
+      "PowerShell($icons = @\\('cog','wheat','truck','code','graduation-cap','shield','handshake','wrench','git-merge','zap','activity','arrow-right','arrow-left','arrow-up-right','corner-down-right','layers','message-square','plug','shopping-cart','radio','cpu','book-open','check','trending-up','scan-eye','file-text','shield-check','workflow'\\); $json = Get-Content node_modules/@iconify-json/lucide/icons.json -Raw | ConvertFrom-Json; foreach \\($i in $icons\\) { if \\(-not $json.icons.PSObject.Properties.Name.Contains\\($i\\)\\) { \"MISSING: $i\" } }; \"checked $\\($icons.Count\\) icons\")",
+      "PowerShell($env:PORT=3123; Start-Process -FilePath \"node\" -ArgumentList \".output/server/index.mjs\" -NoNewWindow -PassThru | Select-Object Id)",
+      "PowerShell(foreach \\($p in @\\('/','/tech/axioms','/privacy','/terms','/contact'\\)\\) { try { $r = Invoke-WebRequest \"http://localhost:3123$p\" -UseBasicParsing -TimeoutSec 25; \"$p -> $\\($r.StatusCode\\) | $\\([math]::Round\\($r.RawContentLength/1kb,1\\)\\)kb\" } catch { \"$p -> FAILED: $\\($_.Exception.Message\\)\" } })",
+      "PowerShell(Stop-Process -Id 41156 -Force -ErrorAction SilentlyContinue)"
     ]
   }
 }

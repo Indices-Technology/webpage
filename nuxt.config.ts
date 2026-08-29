@@ -7,6 +7,11 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
   ],
+  tailwindcss: { cssPath: '~/assets/css/main.css' },
+  icon: {
+    // Bundled locally — no runtime calls to the Iconify API.
+    serverBundle: { collections: ['lucide'] },
+  },
   app: {
     head: {
       htmlAttrs: { lang: 'en' },

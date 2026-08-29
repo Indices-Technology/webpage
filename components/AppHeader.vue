@@ -15,32 +15,34 @@
 
         <!-- Wordmark -->
         <div class="flex flex-col leading-none">
-          <div class="text-lg sm:text-xl lg:text-2xl font-black tracking-tighter text-slate-900 dark:text-white">
-            INDICES<span class="text-blue-600">.</span>
+          <div class="text-lg sm:text-xl font-semibold tracking-[-0.03em] text-ink dark:text-white">
+            INDICES<span class="text-brand-600">.</span>
           </div>
-          <div class="hidden sm:block text-[9px] lg:text-[10px] font-bold tracking-[0.18em] text-slate-400 dark:text-slate-500 uppercase mt-0.5">
+          <div class="hidden sm:block font-mono text-[9px] tracking-label text-slate-400 dark:text-slate-500 uppercase mt-1">
             Technology LTD
           </div>
         </div>
       </NuxtLink>
 
       <!-- ── DESKTOP NAV ── -->
-      <div class="hidden lg:flex items-center gap-8">
-        <div class="flex items-center gap-5 border-r border-slate-200 dark:border-slate-700 pr-8">
-          <NuxtLink to="/tech/axioms" class="group flex items-center gap-2 hover:-translate-y-px transition-all">
-            <span class="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse"></span>
-            <span class="text-[11px] font-black tracking-widest uppercase text-slate-600 dark:text-slate-300 group-hover:text-purple-600 transition-colors">Axioms AI</span>
-          </NuxtLink>
-          <a href="https://marketx.indicestech.com" target="_blank" rel="noopener" class="group flex items-center gap-2 hover:-translate-y-px transition-all">
-            <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
-            <span class="text-[11px] font-black tracking-widest uppercase text-slate-600 dark:text-slate-300 group-hover:text-pink-600 transition-colors">marketx ↗</span>
+      <div class="hidden lg:flex items-center gap-7 text-sm">
+        <div class="flex items-center gap-6 border-r border-slate-200 dark:border-slate-800 pr-7">
+          <a href="https://marketx.africa" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-1.5 font-medium text-ink dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+            marketx
+            <Icon name="lucide:arrow-up-right" class="w-3.5 h-3.5 text-slate-400" />
           </a>
+          <NuxtLink to="/tech/axioms#architecture"
+            class="font-medium text-ink dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Dasah</NuxtLink>
+          <NuxtLink to="/tech/axioms"
+            class="font-medium text-ink dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Axioms</NuxtLink>
         </div>
-        <div class="flex gap-5 text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-tight">
-          <NuxtLink to="/tech"        class="hover:text-blue-600   transition-colors">Industrial</NuxtLink>
-          <NuxtLink to="/agriculture" class="hover:text-orange-600 transition-colors">Agri</NuxtLink>
-          <NuxtLink to="/logistics"   class="hover:text-red-600    transition-colors">Logistics</NuxtLink>
-          <NuxtLink to="/security"    class="hover:text-slate-900  transition-colors">Security</NuxtLink>
+        <div class="flex gap-6 text-ink-muted dark:text-slate-400">
+          <NuxtLink to="/tech"        class="hover:text-ink dark:hover:text-white transition-colors">Industrial</NuxtLink>
+          <NuxtLink to="/agriculture" class="hover:text-ink dark:hover:text-white transition-colors">Agriculture</NuxtLink>
+          <NuxtLink to="/logistics"   class="hover:text-ink dark:hover:text-white transition-colors">Logistics</NuxtLink>
+          <NuxtLink to="/security"    class="hover:text-ink dark:hover:text-white transition-colors">Security</NuxtLink>
+          <NuxtLink to="/services"    class="hover:text-ink dark:hover:text-white transition-colors">Services</NuxtLink>
         </div>
       </div>
 
@@ -62,11 +64,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
           </svg>
         </button>
-        <NuxtLink to="/contact"
-          class="inline-flex items-center gap-1.5 bg-blue-600 text-white rounded-full font-black uppercase tracking-wider hover:bg-blue-500 transition-all shadow-md shadow-blue-600/25 hover:scale-105 px-3 py-2 text-[10px] sm:px-4 sm:py-2.5 lg:px-5">
-          <span class="w-1.5 h-1.5 rounded-full bg-white/70 animate-pulse"></span>
-          <span class="hidden sm:inline">Contact Us</span>
-          <span class="sm:hidden">Contact</span>
+        <NuxtLink to="/contact" class="btn-primary !px-4 !py-2">
+          Contact
         </NuxtLink>
 
         <!-- Hamburger — mobile & tablet only -->
@@ -131,7 +130,7 @@
                   <rect x="32" y="8"  width="6" height="6" rx="1.5" fill="#2563eb" opacity="0.80"/>
                   <rect x="32" y="16" width="6" height="6" rx="1.5" fill="#2563eb" opacity="0.80"/>
                 </svg>
-                <span class="text-base font-black tracking-tighter text-slate-900 dark:text-white">INDICES<span class="text-blue-600">.</span></span>
+                <span class="text-base font-semibold tracking-[-0.03em] text-ink dark:text-white">INDICES<span class="text-brand-600">.</span></span>
               </div>
               <button
                 type="button"
@@ -149,37 +148,38 @@
             <div class="flex-1 overflow-y-auto px-4 py-5 space-y-6">
 
               <div>
-                <p class="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] px-2 mb-2">Platforms</p>
-                <NuxtLink to="/tech/axioms" @click="mobileMenuOpen = false"
-                  class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-purple-50 dark:hover:bg-purple-900/20 hover:text-purple-700 transition-colors">
-                  <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>Axioms AI
-                </NuxtLink>
-                <a href="https://marketx.indicestech.com" target="_blank" rel="noopener" @click="mobileMenuOpen = false"
-                  class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-pink-50 dark:hover:bg-pink-900/20 hover:text-pink-700 transition-colors">
-                  <span class="w-2 h-2 rounded-full bg-pink-500 shrink-0"></span>marketx ↗
+                <p class="label px-3 mb-1">Products</p>
+                <a href="https://marketx.africa" target="_blank" rel="noopener" @click="mobileMenuOpen = false"
+                  class="flex items-center justify-between gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-ink dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                  marketx
+                  <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-slate-400" />
                 </a>
+                <NuxtLink to="/tech/axioms#architecture" @click="mobileMenuOpen = false"
+                  class="block px-3 py-2.5 rounded-lg text-sm font-medium text-ink dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                  Dasah
+                </NuxtLink>
+                <NuxtLink to="/tech/axioms" @click="mobileMenuOpen = false"
+                  class="block px-3 py-2.5 rounded-lg text-sm font-medium text-ink dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                  Axioms
+                </NuxtLink>
               </div>
 
               <div>
-                <p class="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] px-2 mb-2">Seven Arms</p>
-                <NuxtLink to="/tech"        @click="mobileMenuOpen = false" class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm text-slate-600 dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-blue-900/20   hover:text-blue-700   transition-colors"><span class="text-base">⚙️</span> Industrial Technology</NuxtLink>
-                <NuxtLink to="/agriculture" @click="mobileMenuOpen = false" class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm text-slate-600 dark:text-slate-300 hover:bg-orange-50 dark:hover:bg-orange-900/20 hover:text-orange-700 transition-colors"><span class="text-base">🌾</span> Agribusiness</NuxtLink>
-                <NuxtLink to="/logistics"   @click="mobileMenuOpen = false" class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm text-slate-600 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-red-900/20    hover:text-red-700    transition-colors"><span class="text-base">🚚</span> Logistics</NuxtLink>
-                <NuxtLink to="/security"    @click="mobileMenuOpen = false" class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900  transition-colors"><span class="text-base">🛡️</span> Security Services</NuxtLink>
-                <NuxtLink to="/education"   @click="mobileMenuOpen = false" class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm text-slate-600 dark:text-slate-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 hover:text-indigo-700 transition-colors"><span class="text-base">📚</span> Education & Training</NuxtLink>
-                <NuxtLink to="/outreach"    @click="mobileMenuOpen = false" class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm text-slate-600 dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 hover:text-emerald-700 transition-colors"><span class="text-base">🤝</span> Outreach & Impact</NuxtLink>
-                <NuxtLink to="/services"    @click="mobileMenuOpen = false" class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm text-slate-600 dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-blue-900/20   hover:text-blue-700   transition-colors"><span class="text-base">🛠️</span> Dev Services</NuxtLink>
+                <p class="label px-3 mb-1">Seven arms</p>
+                <NuxtLink v-for="arm in arms" :key="arm.path" :to="arm.path" @click="mobileMenuOpen = false"
+                  class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-ink-muted dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-ink dark:hover:text-white transition-colors">
+                  <Icon :name="arm.icon" class="w-4 h-4 text-slate-400 shrink-0" />
+                  {{ arm.name }}
+                </NuxtLink>
               </div>
             </div>
 
             <!-- Panel footer -->
             <div class="px-4 pb-6 pt-4 border-t border-slate-100 dark:border-slate-800 space-y-3 shrink-0">
-              <NuxtLink to="/contact" @click="mobileMenuOpen = false"
-                class="flex items-center justify-center gap-2 w-full bg-blue-600 text-white py-3.5 rounded-xl font-black text-sm uppercase tracking-wider hover:bg-blue-500 transition-all">
-                <span class="w-1.5 h-1.5 rounded-full bg-white/70 animate-pulse"></span>
-                Contact Us
+              <NuxtLink to="/contact" @click="mobileMenuOpen = false" class="btn-primary w-full">
+                Contact us
               </NuxtLink>
-              <p class="text-center text-[10px] text-slate-400 dark:text-slate-600">RC7529506 · Indices Technology LTD</p>
+              <p class="text-center font-mono text-[10px] text-slate-400 dark:text-slate-600">RC7529506 · Indices Technology LTD</p>
             </div>
           </div>
         </Transition>
@@ -192,4 +192,14 @@
 import { ref } from 'vue'
 const mobileMenuOpen = ref(false)
 const { isDark, toggle } = useTheme()
+
+const arms = [
+  { name: 'Industrial Technology', path: '/tech',        icon: 'lucide:cog' },
+  { name: 'Agribusiness',          path: '/agriculture', icon: 'lucide:wheat' },
+  { name: 'Logistics',             path: '/logistics',   icon: 'lucide:truck' },
+  { name: 'Security Services',     path: '/security',    icon: 'lucide:shield' },
+  { name: 'Education & Training',  path: '/education',   icon: 'lucide:graduation-cap' },
+  { name: 'Outreach & Impact',     path: '/outreach',    icon: 'lucide:handshake' },
+  { name: 'Development Services',  path: '/services',    icon: 'lucide:wrench' },
+]
 </script>

@@ -47,7 +47,11 @@ useHead({
           email: 'contactindices@gmail.com',
           availableLanguage: 'English',
         },
-        sameAs: ['https://stylex.indicestech.com'],
+        sameAs: [
+          'https://www.linkedin.com/company/110836287',
+          'https://marketx.africa',
+          'https://stylex.indicestech.com',
+        ],
       }),
     },
   ],

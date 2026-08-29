@@ -1,56 +1,63 @@
 <template>
-  <main class="bg-slate-950 text-white selection:bg-purple-500/30">
-    <section class="relative min-h-[90vh] flex items-center overflow-hidden border-b border-white/5">
-      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgY3g9IjMiIGN5PSIzIiByPSIxIiBmaWxsPSJyZ2JhKDE2OCw4NSwyNDcsMC4xNSkiLz48L2c+PC9zdmc+')] opacity-100"></div>
-      
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-20">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <div class="space-y-8">
-            <div class="inline-flex items-center gap-3 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-[10px] font-black uppercase tracking-[0.2em]">
-              <span class="relative flex h-2 w-2">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
-              </span>
-              RAG-Enabled Intelligence Active
-            </div>
+  <main class="bg-ink text-white">
+    <!-- Hero -->
+    <section class="border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-20 lg:pt-40 lg:pb-28">
+        <div class="grid lg:grid-cols-12 gap-16 items-center">
+          <div class="lg:col-span-6">
+            <p class="label !text-slate-500 mb-6">Intelligent infrastructure</p>
 
-            <h1 class="text-6xl lg:text-9xl font-black leading-[0.85] tracking-tighter uppercase">
-              Axioms<br/>
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500 italic font-serif lowercase">intelligence.</span>
+            <h1 class="text-5xl lg:text-6xl font-semibold leading-[1.02] tracking-[-0.035em] mb-6">
+              Axioms
             </h1>
 
-            <p class="text-xl text-slate-400 leading-relaxed max-w-xl font-light">
-              We deploy **EdgeAI** and **IoT** networks to harvest industrial telemetry, processed through **RAG-optimized** LLMs for zero-hallucination decision making.
+            <p class="text-xl text-slate-400 leading-relaxed max-w-xl mb-10">
+              The intelligent infrastructure arm of Indices Technology — conversational AI, machine intelligence,
+              edge computing, IoT and secure digital infrastructure, built as one shared layer instead of
+              isolated AI systems bolted onto each product.
             </p>
 
-            <div class="flex flex-wrap gap-4">
-              <button class="bg-purple-600 text-white px-8 py-4 rounded-xl font-bold hover:shadow-[0_0_40px_rgba(168,85,247,0.3)] transition-all">
-                Talk to DAssah AI
-              </button>
-              <button class="border-2 border-white/10 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition-all">
-                IoT Device Management
-              </button>
+            <div class="flex flex-wrap gap-3">
+              <NuxtLink to="/contact" class="btn-primary">
+                Talk to Dasah
+                <Icon name="lucide:arrow-right" class="w-4 h-4" />
+              </NuxtLink>
+              <a href="#architecture" class="btn-ghost-dark">See the architecture</a>
             </div>
           </div>
 
-          <div class="relative flex justify-center lg:justify-end">
-            <div class="w-80 h-[500px] bg-slate-900 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden p-4">
-              <div class="flex items-center gap-3 mb-6 border-b border-white/5 pb-4">
-                <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-500 to-indigo-600 flex items-center justify-center text-xs font-bold">D</div>
+          <!-- Capability trace, not a fake chat window -->
+          <div class="lg:col-span-6">
+            <div class="rounded-xl border border-white/10 overflow-hidden">
+              <div class="flex items-center justify-between px-5 py-3 border-b border-white/5">
+                <p class="label !text-slate-500">Dasah · capability trace</p>
+                <span class="font-mono text-[11px] text-slate-600">one interface, many systems</span>
+              </div>
+
+              <div class="p-5 space-y-5">
                 <div>
-                  <p class="text-[10px] font-bold">DAssah Chatbot</p>
-                  <p class="text-[8px] text-emerald-500 uppercase tracking-widest animate-pulse">Online • RAG Synced</p>
+                  <p class="label !text-slate-600 mb-2">Asked</p>
+                  <p class="text-sm text-slate-200 leading-relaxed">
+                    "Where is my order from the Kaduna seller, and is that seller verified?"
+                  </p>
                 </div>
-              </div>
-              <div class="space-y-4">
-                <div class="bg-white/5 p-3 rounded-2xl rounded-tl-none text-[10px] text-slate-300">
-                  Welcome to Indices. I have analyzed current soil moisture from the North Sector IoT nodes. Should I initiate irrigation?
+
+                <div>
+                  <p class="label !text-slate-600 mb-2">Resolved</p>
+                  <ul class="font-mono text-xs space-y-1.5 text-slate-400">
+                    <li v-for="call in traceCalls" :key="call" class="flex items-center gap-2.5">
+                      <Icon name="lucide:corner-down-right" class="w-3.5 h-3.5 text-slate-600 shrink-0" />
+                      {{ call }}
+                    </li>
+                  </ul>
                 </div>
-                <div class="bg-purple-600 p-3 rounded-2xl rounded-tr-none text-[10px] ml-6">
-                  Yes, cross-reference with the weather forecast for the next 48 hours.
-                </div>
-                <div class="bg-white/5 p-3 rounded-2xl rounded-tl-none text-[10px] text-slate-300">
-                  <span class="font-bold text-purple-400">RAG Analysis:</span> Forecast predicts heavy rain in 12hrs. I recommend delaying irrigation to save energy and water.
+
+                <div class="pt-4 border-t border-white/5">
+                  <p class="label !text-slate-600 mb-2">Answered</p>
+                  <p class="text-sm text-slate-300 leading-relaxed">
+                    Order <span class="font-mono text-white">#4821</span> left the Kaduna hub this morning and is
+                    out for delivery. The seller is verified, with a trust score of 92.
+                  </p>
                 </div>
               </div>
             </div>
@@ -59,68 +66,240 @@
       </div>
     </section>
 
-    <!-- AI Services Section -->
-    <section class="py-28 px-6 border-b border-white/5">
-      <div class="max-w-7xl mx-auto space-y-16">
-        <div class="text-center space-y-4">
-          <p class="text-[10px] font-black uppercase tracking-[0.3em] text-purple-400">What We Build For You</p>
-          <h2 class="text-4xl sm:text-5xl font-black tracking-tighter uppercase">AI Services</h2>
-          <p class="text-slate-400 text-lg font-light max-w-2xl mx-auto">Enterprise-grade intelligence deployed across your operations — from raw data to real decisions.</p>
+    <!-- Positioning -->
+    <section class="border-b border-white/5">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 py-24">
+        <p class="label !text-slate-500 mb-6">What Axioms is</p>
+        <p class="text-2xl sm:text-[1.75rem] leading-snug text-slate-200 mb-6 tracking-[-0.02em]">
+          Rather than building isolated AI systems for each product, Axioms provides a
+          <span class="text-white">shared intelligence layer</span> through which applications expose
+          capabilities, exchange events and access intelligent services.
+        </p>
+        <p class="text-lg text-slate-400 leading-relaxed">
+          At its centre is <span class="text-white">Dasah</span> — a universal conversational interface
+          through which people and systems interact with capabilities across the Indices ecosystem.
+          <a href="https://marketx.africa" target="_blank" rel="noopener"
+            class="text-white border-b border-white/30 hover:border-white transition-colors">MarketX</a>
+          is one of the first clients of this infrastructure; future Indices platforms connect to the same
+          underlying intelligence.
+        </p>
+      </div>
+    </section>
+
+    <!-- Architecture -->
+    <section id="architecture" class="border-b border-white/5 scroll-mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-24">
+        <div class="max-w-2xl mb-14">
+          <p class="label !text-slate-500 mb-5">How it fits together</p>
+          <h2 class="text-3xl sm:text-4xl mb-5 leading-[1.1]">Architecture</h2>
+          <p class="text-lg text-slate-400 leading-relaxed">
+            Dasah is not a chatbot for one product. It is the conversational layer of Axioms, and every Indices
+            platform is a client of the same infrastructure.
+          </p>
         </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div v-for="service in aiServices" :key="service.title"
-            class="group relative p-8 rounded-3xl border border-white/5 bg-white/[0.03] hover:border-purple-500/40 hover:bg-white/[0.06] transition-all overflow-hidden">
-            <div class="absolute top-0 right-0 w-40 h-40 bg-purple-600/5 rounded-full blur-3xl group-hover:bg-purple-600/10 transition-all -translate-y-1/2 translate-x-1/2"></div>
-            <div class="relative">
-              <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl mb-6 transition-all"
-                :class="service.iconBg">
-                {{ service.icon }}
+        <div class="grid lg:grid-cols-2 gap-6 items-start">
+          <div class="rounded-xl border border-white/10 p-8 overflow-x-auto">
+            <pre class="font-mono text-xs leading-[1.9] text-slate-400"><span class="text-white">Axioms</span>
+   │
+   └── <span class="text-white">Dasah</span>  <span class="text-slate-600">— conversational layer</span>
+        │
+        ├── MarketX
+        ├── Logistics
+        ├── Security
+        ├── IoT
+        ├── Edge systems
+        └── Future Indices platforms</pre>
+          </div>
+
+          <dl class="divide-y divide-white/5 border-y border-white/5">
+            <div v-for="layer in architectureLayers" :key="layer.title" class="flex gap-5 py-6">
+              <Icon :name="layer.icon" class="w-5 h-5 mt-0.5 shrink-0 text-slate-500" />
+              <div>
+                <dt class="font-semibold mb-1.5">{{ layer.title }}</dt>
+                <dd class="text-sm text-slate-400 leading-relaxed">{{ layer.desc }}</dd>
               </div>
-              <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-500/10 border border-purple-500/15 text-purple-400 text-[8px] font-black uppercase tracking-widest mb-4">
-                {{ service.badge }}
-              </div>
-              <h3 class="text-base font-black text-white mb-3 leading-tight">{{ service.title }}</h3>
-              <p class="text-xs text-slate-500 leading-relaxed mb-6">{{ service.desc }}</p>
-              <ul class="space-y-2">
-                <li v-for="feat in service.features" :key="feat" class="flex items-center gap-2 text-[10px] text-slate-400">
-                  <span class="w-1 h-1 rounded-full bg-purple-500 shrink-0"></span>
-                  {{ feat }}
-                </li>
-              </ul>
             </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capability layer -->
+    <section class="border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-24">
+        <div class="max-w-2xl mb-14">
+          <p class="label !text-slate-500 mb-5">The contract</p>
+          <h2 class="text-3xl sm:text-4xl mb-5 leading-[1.1]">Capabilities, not tightly coupled apps</h2>
+          <p class="text-lg text-slate-400 leading-relaxed">
+            Every system publishes what it can do as a named, versioned capability. Dasah never needs to understand
+            the internals of MarketX, a logistics hub or an edge device — it asks Axioms for the capability.
+            New Indices products can be added without rebuilding Dasah.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-xl overflow-hidden">
+          <div v-for="ns in capabilities" :key="ns.namespace" class="bg-ink p-6">
+            <div class="flex items-center gap-2.5 mb-5">
+              <Icon :name="ns.icon" class="w-4 h-4 text-slate-500" />
+              <span class="font-mono text-xs text-white">{{ ns.namespace }}</span>
+            </div>
+            <ul class="space-y-2">
+              <li v-for="tool in ns.tools" :key="tool" class="font-mono text-xs text-slate-500">
+                {{ tool }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event fabric -->
+    <section class="border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-24 grid lg:grid-cols-12 gap-16 items-center">
+        <div class="lg:col-span-5">
+          <p class="label !text-slate-500 mb-5">The nervous system</p>
+          <h2 class="text-3xl sm:text-4xl mb-5 leading-[1.1]">Event-driven by design</h2>
+          <p class="text-lg text-slate-400 leading-relaxed">
+            Systems in the ecosystem emit events rather than calling each other directly. Those events trigger
+            workflows, notifications, analytics and AI reasoning — which is what turns a set of applications into
+            an ecosystem instead of a web of hidden dependencies.
+          </p>
+        </div>
+
+        <ul class="lg:col-span-7 grid sm:grid-cols-2 gap-2">
+          <li v-for="evt in events" :key="evt"
+            class="font-mono text-xs px-4 py-3 rounded-lg border border-white/10 text-slate-300">
+            {{ evt }}
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Intelligence vs orchestration -->
+    <section class="border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-24">
+        <div class="max-w-2xl mb-14">
+          <p class="label !text-slate-500 mb-5">A deliberate separation</p>
+          <h2 class="text-3xl sm:text-4xl mb-5 leading-[1.1]">Intelligence is not orchestration</h2>
+          <p class="text-lg text-slate-400 leading-relaxed">
+            An automation platform is not the brain. Dasah decides what should happen; a workflow layer makes sure
+            it happens reliably.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="rounded-xl border border-white/10 p-8">
+            <p class="label !text-brand-400 mb-4">Decides</p>
+            <h3 class="text-xl mb-3">Dasah</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-6">
+              Understands intent, holds conversational state, selects capabilities and reasons over results.
+            </p>
+            <ul class="space-y-3">
+              <li v-for="item in decidesList" :key="item" class="flex gap-3 text-sm text-slate-400">
+                <Icon name="lucide:check" class="w-4 h-4 mt-0.5 shrink-0 text-brand-400" />
+                {{ item }}
+              </li>
+            </ul>
+          </div>
+
+          <div class="rounded-xl border border-white/10 p-8">
+            <p class="label !text-slate-500 mb-4">Executes</p>
+            <h3 class="text-xl mb-3">Workflow layer</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-6">
+              Durable execution, retries, scheduling and long-running processes — replaceable, and never the
+              foundation of the intelligence itself.
+            </p>
+            <ul class="space-y-3">
+              <li v-for="item in executesList" :key="item" class="flex gap-3 text-sm text-slate-400">
+                <Icon name="lucide:check" class="w-4 h-4 mt-0.5 shrink-0 text-slate-600" />
+                {{ item }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capability domains -->
+    <section class="border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-24">
+        <div class="max-w-2xl mb-14">
+          <p class="label !text-slate-500 mb-5">What we build</p>
+          <h2 class="text-3xl sm:text-4xl mb-5 leading-[1.1]">Capability domains</h2>
+          <p class="text-lg text-slate-400 leading-relaxed">
+            The disciplines Axioms covers — deployed inside the Indices ecosystem, and available to partners
+            who need the same infrastructure.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-xl overflow-hidden">
+          <div v-for="domain in domains" :key="domain.title" class="bg-ink p-8">
+            <Icon :name="domain.icon" class="w-5 h-5 text-slate-500 mb-6" />
+            <h3 class="font-semibold text-white mb-2.5 leading-snug">{{ domain.title }}</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-6">{{ domain.desc }}</p>
+            <ul class="space-y-1.5">
+              <li v-for="feat in domain.features" :key="feat" class="font-mono text-[11px] text-slate-600">
+                {{ feat }}
+              </li>
+            </ul>
           </div>
         </div>
 
-        <!-- CTA strip -->
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-6 p-8 rounded-3xl border border-purple-500/20 bg-purple-500/5">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mt-6 p-8 rounded-xl border border-white/10">
           <div>
-            <p class="text-lg font-black">Ready to deploy intelligence in your business?</p>
-            <p class="text-sm text-slate-400 mt-1">Book a scoping call and we'll design a solution around your data.</p>
+            <p class="font-semibold mb-1">Want your systems to speak this language?</p>
+            <p class="text-sm text-slate-400">Book a scoping call and we'll map your data, capabilities and events.</p>
           </div>
-          <button class="shrink-0 bg-purple-600 text-white px-10 py-4 rounded-xl font-bold text-sm hover:shadow-[0_0_40px_rgba(168,85,247,0.3)] hover:scale-105 transition-all whitespace-nowrap">
-            Request a Demo →
-          </button>
+          <NuxtLink to="/contact" class="btn-primary shrink-0">
+            Talk to us
+            <Icon name="lucide:arrow-right" class="w-4 h-4" />
+          </NuxtLink>
         </div>
       </div>
     </section>
 
-    <!-- Tech Stack Section -->
-    <section class="py-24 px-6">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div v-for="tech in techStack" :key="tech.title" 
-            class="p-8 rounded-3xl border border-white/5 bg-white/5 hover:border-purple-500/30 transition-all group">
-            <div class="text-3xl mb-6 group-hover:scale-110 transition-transform">{{ tech.icon }}</div>
-            <h3 class="text-lg font-black mb-3">{{ tech.title }}</h3>
-            <p class="text-xs text-slate-500 leading-relaxed mb-6">{{ tech.desc }}</p>
-            <div class="flex flex-wrap gap-2">
-              <span v-for="tag in tech.tags" :key="tag" class="text-[8px] font-bold uppercase tracking-widest px-2 py-1 bg-purple-500/10 text-purple-400 rounded">
-                {{ tag }}
-              </span>
-            </div>
-          </div>
+    <!-- Engineering principles -->
+    <section class="border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-24">
+        <div class="max-w-2xl mb-14">
+          <p class="label !text-slate-500 mb-5">Built to be inherited</p>
+          <h2 class="text-3xl sm:text-4xl mb-5 leading-[1.1]">Engineering principles</h2>
+          <p class="text-lg text-slate-400 leading-relaxed">
+            What we build now is infrastructure that future teams will inherit. The goal isn't a heavyweight
+            enterprise architecture on day one — it's avoiding the hidden coupling that becomes a nightmare later.
+          </p>
         </div>
+
+        <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-px">
+          <li v-for="(p, i) in principles" :key="p"
+            class="flex items-baseline gap-4 py-4 border-b border-white/5 text-sm text-slate-300">
+            <span class="font-mono text-[11px] text-slate-600 tabular-nums">{{ String(i + 1).padStart(2, '0') }}</span>
+            {{ p }}
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Technology direction -->
+    <section>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-24">
+        <div class="max-w-2xl mb-14">
+          <p class="label !text-slate-500 mb-5">Technology direction</p>
+          <h2 class="text-3xl sm:text-4xl mb-5 leading-[1.1]">The stack, and why</h2>
+          <p class="text-lg text-slate-400 leading-relaxed">
+            Languages are chosen for the work they do, not for fashion. The Axioms backend is a service in its own
+            right — interfaces are clients of it, never its foundation.
+          </p>
+        </div>
+
+        <dl class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-10">
+          <div v-for="tech in techStack" :key="tech.title" class="pt-6 border-t border-white/10">
+            <dt class="font-semibold mb-3">{{ tech.title }}</dt>
+            <dd class="text-sm text-slate-400 leading-relaxed mb-4">{{ tech.desc }}</dd>
+            <dd class="font-mono text-[11px] text-slate-600">{{ tech.tags.join(' · ') }}</dd>
+          </div>
+        </dl>
       </div>
     </section>
   </main>
@@ -128,88 +307,163 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Axioms AI',
-  ogTitle: 'Axioms AI — Indices Technology LTD',
-  description: 'Axioms AI is the intelligence core of Indices Technology — offering RAG chatbots, predictive analytics, computer vision, document processing, and voice AI for African enterprises.',
-  ogDescription: 'RAG chatbots, predictive analytics, computer vision, and voice AI — Axioms AI powers the INDICES ecosystem.',
+  title: 'Axioms — Intelligent Infrastructure',
+  ogTitle: 'Axioms — Intelligent Infrastructure | Indices Technology LTD',
+  description: 'Axioms is the intelligent infrastructure arm of Indices Technology, bringing together conversational AI, machine intelligence, edge computing, IoT and secure digital infrastructure. At its centre is Dasah, a universal conversational interface to capabilities across the Indices ecosystem.',
+  ogDescription: 'A shared intelligence layer for the Indices ecosystem — capabilities, events and Dasah, the universal conversational interface.',
   ogUrl: 'https://indicestech.com/tech/axioms',
 })
 
-const aiServices = [
+const traceCalls = [
+  'marketx.get_order',
+  'marketx.get_seller',
+  'logistics.track_delivery',
+]
+
+const architectureLayers = [
   {
-    title: 'Custom RAG Chatbot Development',
-    icon: '🤖',
-    iconBg: 'bg-purple-500/10 group-hover:bg-purple-600 group-hover:text-white',
-    badge: 'Most Popular',
-    desc: 'We build private, hallucination-free chatbots trained on your documents, SOPs, and internal knowledge base — deployed on your infrastructure.',
-    features: ['PDF, database & API ingestion', 'Multi-language support', 'Role-based access control', 'White-label ready']
+    title: 'Axioms — the infrastructure',
+    icon: 'lucide:layers',
+    desc: 'The shared intelligence and interaction layer of Indices. It owns the capability registry, the event fabric, identity and the intelligent services every platform draws on.'
   },
   {
-    title: 'Predictive Analytics & Forecasting',
-    icon: '📈',
-    iconBg: 'bg-blue-500/10 group-hover:bg-blue-600 group-hover:text-white',
-    badge: 'Industrial',
-    desc: 'Time-series models that predict equipment failure, demand surges, and yield outcomes before they happen — trained on your historical data.',
-    features: ['Anomaly detection', 'Demand & yield forecasting', 'Maintenance scheduling', 'Dashboard integration']
+    title: 'Dasah — the conversational layer',
+    icon: 'lucide:message-square',
+    desc: 'The universal interface to Axioms. People and systems speak to it in text, voice and eventually other modalities; Dasah works out what is needed and reaches for the right capability.'
   },
   {
-    title: 'Computer Vision Systems',
-    icon: '👁️',
-    iconBg: 'bg-pink-500/10 group-hover:bg-pink-600 group-hover:text-white',
-    badge: 'Edge AI',
-    desc: 'Visual inspection, product quality control, and surveillance automation deployed on edge devices — no cloud latency, fully offline capable.',
-    features: ['Defect & anomaly detection', 'People & object counting', 'NVIDIA Jetson deployment', 'Real-time alerts']
+    title: 'Clients — the platforms',
+    icon: 'lucide:plug',
+    desc: 'MarketX, logistics, security, IoT and edge systems connect as clients. MarketX is the first major use case for Dasah, not its owner — new platforms plug in without rebuilding it.'
+  }
+]
+
+const capabilities = [
+  { namespace: 'marketx.*',   icon: 'lucide:shopping-cart', tools: ['get_order', 'get_seller', 'get_trust_score'] },
+  { namespace: 'logistics.*', icon: 'lucide:truck',         tools: ['track_delivery', 'get_route', 'assign_dispatch'] },
+  { namespace: 'security.*',  icon: 'lucide:shield',        tools: ['get_alerts', 'get_incident', 'verify_access'] },
+  { namespace: 'iot.*',       icon: 'lucide:radio',         tools: ['get_sensor', 'list_devices', 'set_threshold'] },
+  { namespace: 'edge.*',      icon: 'lucide:cpu',           tools: ['get_device_status', 'deploy_model', 'sync_state'] },
+  { namespace: 'knowledge.*', icon: 'lucide:book-open',     tools: ['search_documents', 'summarize', 'cite_source'] }
+]
+
+const events = [
+  'order.completed',
+  'seller.verified',
+  'payment.completed',
+  'delivery.updated',
+  'device.alert',
+  'trust.score.changed'
+]
+
+const decidesList = [
+  'Intent understanding across text and voice',
+  'Conversation and session state',
+  'Capability selection and tool calling',
+  'Reasoning over results and context',
+  'Access decisions on behalf of the user'
+]
+
+const executesList = [
+  'Durable, retryable execution',
+  'Long-running and scheduled processes',
+  'Fan-out to downstream services',
+  'Visual automation for external integrations',
+  'Swappable — the intelligence does not depend on it'
+]
+
+const domains = [
+  {
+    title: 'Conversational AI',
+    icon: 'lucide:message-square',
+    desc: 'The universal interface layer — text and voice interaction that resolves intent and routes it to capabilities across the ecosystem.',
+    features: ['Text and voice', 'African languages', 'Tool calling', 'Session state']
   },
   {
-    title: 'AI-Powered Document Processing',
-    icon: '📄',
-    iconBg: 'bg-amber-500/10 group-hover:bg-amber-600 group-hover:text-white',
-    badge: 'Automation',
-    desc: 'Automate extraction, classification, and summarization of invoices, contracts, customs documents, and reports at scale.',
-    features: ['OCR + LLM extraction', 'Contract clause analysis', 'Multilingual processing', 'ERP system integration']
+    title: 'Machine Learning & Forecasting',
+    icon: 'lucide:trending-up',
+    desc: 'Models that predict equipment failure, demand surges and yield outcomes before they happen — trained on operational data from across the group.',
+    features: ['Anomaly detection', 'Demand forecasting', 'Maintenance scheduling']
   },
   {
-    title: 'Voice & Conversational AI',
-    icon: '🎙️',
-    iconBg: 'bg-emerald-500/10 group-hover:bg-emerald-600 group-hover:text-white',
-    badge: 'NLP',
-    desc: 'Build voice-first interfaces and multilingual call automation for customer support, field operations, and logistics dispatch.',
-    features: ['African language support', 'Voice-to-action workflows', 'IVR replacement', 'Real-time transcription']
+    title: 'RAG & Knowledge Systems',
+    icon: 'lucide:book-open',
+    desc: 'Retrieval-augmented reasoning over private documents, SOPs and databases, so answers carry citations instead of confidence alone.',
+    features: ['Vector retrieval', 'Source citation', 'Role-based access']
   },
   {
-    title: 'AI Strategy & Integration Consulting',
-    icon: '🧩',
-    iconBg: 'bg-indigo-500/10 group-hover:bg-indigo-600 group-hover:text-white',
-    badge: 'Consulting',
-    desc: 'Not sure where to start? We audit your data pipeline, identify the highest-ROI AI use cases, and deliver a phased implementation roadmap.',
-    features: ['Data readiness audit', 'Use-case prioritization', 'Vendor & model selection', 'Team training & handoff']
+    title: 'Edge AI',
+    icon: 'lucide:cpu',
+    desc: 'Local model execution on farm, mining and field hardware — decisions that survive a lost connection and sync when the link returns.',
+    features: ['On-device inference', 'Offline-first sync', 'Remote deployment']
+  },
+  {
+    title: 'IoT & Telemetry',
+    icon: 'lucide:radio',
+    desc: 'Real-time telemetry from sensor fleets — soil health, livestock vitals, vehicle position, facility conditions — normalised into shared event streams.',
+    features: ['MQTT device fabric', 'Device registry', 'Threshold rules']
+  },
+  {
+    title: 'Computer Vision',
+    icon: 'lucide:scan-eye',
+    desc: 'Visual inspection, quality control and surveillance automation running at the edge, where the cameras are.',
+    features: ['Defect detection', 'Object counting', 'Real-time alerting']
+  },
+  {
+    title: 'Document Intelligence',
+    icon: 'lucide:file-text',
+    desc: 'Extraction, classification and summarisation of invoices, contracts, customs papers and reports — at the volume real operations produce.',
+    features: ['OCR + LLM extraction', 'Clause analysis', 'ERP integration']
+  },
+  {
+    title: 'Secure Digital Infrastructure',
+    icon: 'lucide:shield-check',
+    desc: 'Identity, authorisation, auditability and observability across every capability call — security as a property of the platform, not an afterthought.',
+    features: ['Auth and access control', 'Audit trails', 'Model and data isolation']
+  },
+  {
+    title: 'APIs, Integration & Automation',
+    icon: 'lucide:workflow',
+    desc: 'Versioned APIs, capability schemas and event contracts that let internal platforms and third-party systems join the ecosystem cleanly.',
+    features: ['Versioned APIs', 'Capability schemas', 'Workflow automation']
   }
 ]
 
 const techStack = [
   {
-    title: 'Edge AI Deployment',
-    icon: '📡',
-    desc: 'Local model execution on farm and mining hardware to ensure zero-latency responses without internet dependency.',
-    tags: ['NVIDIA Jetson', 'TensorRT', 'Offline-First']
+    title: 'TypeScript core',
+    desc: 'Axioms and Dasah live where APIs, realtime communication, tool calling, auth, events and workflows meet — the work TypeScript is genuinely good at.',
+    tags: ['Services', 'Realtime', 'Tool calling']
   },
   {
-    title: 'Industrial IoT Hub',
-    icon: '🚥',
-    desc: 'Real-time telemetry from thousands of sensors tracking soil health, livestock vitals, and fleet locations.',
-    tags: ['MQTT', 'Sensors', 'Real-time Analytics']
+    title: 'Interfaces as clients',
+    desc: 'Nuxt and Vue front-ends are clients of the Axioms backend, not its foundation. The intelligence is reachable from any surface, not trapped in a web app.',
+    tags: ['Nuxt', 'Vue', 'Decoupled']
   },
   {
-    title: 'RAG Architecture',
-    icon: '📚',
-    desc: 'Retrieval-Augmented Generation connects our LLMs to private Indices data, eliminating hallucinations in corporate reports.',
-    tags: ['Vector DB', 'Knowledge Retrieval', 'Accuracy']
+    title: 'Python for ML',
+    desc: 'A specialised layer for machine learning, computer vision and scientific workloads — behind clear service boundaries rather than woven through the core.',
+    tags: ['ML', 'Vision', 'Research']
   },
   {
-    title: 'DAssah Interface',
-    icon: '💬',
-    desc: 'The conversational hub for the Indices Group. Interact with any sector via natural language voice or text.',
-    tags: ['NLP', 'Multi-Sector Hub', 'Assistant']
+    title: 'Go and Rust at the edge',
+    desc: 'Introduced where edge, networking, security or performance requirements genuinely justify them — and not before.',
+    tags: ['Edge', 'Networking', 'Performance']
   }
+]
+
+const principles = [
+  'Clear service boundaries',
+  'Explicit contracts',
+  'Versioned APIs',
+  'Capability & tool schemas',
+  'Event contracts',
+  'Authentication & authorisation',
+  'Observability',
+  'Auditability',
+  'Documentation',
+  'Replaceable components',
+  'Database ownership boundaries',
+  'Architecture Decision Records'
 ]
 </script>
