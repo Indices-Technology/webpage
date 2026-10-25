@@ -237,9 +237,8 @@
 </template>
 
 <script setup>
-// Flip postaLive to true once posta.indicestech.com is serving (see posta/docs/HOSTING.md).
 const POSTA_URL = 'https://posta.indicestech.com'
-const postaLive = false
+const postaLive = true
 
 useSeoMeta({
   title: 'Posta · Logistics',

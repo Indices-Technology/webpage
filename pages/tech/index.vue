@@ -18,16 +18,13 @@
             </h1>
 
             <p class="text-xl text-slate-600 leading-relaxed mb-10 max-w-xl">
-              From the fabrication of high-criteria machinery to the deployment of autonomous mining fleets, we build the physical assets that drive Africa's GDP.
+              From the fabrication of high-criteria machinery to autonomous mining fleets, we are working toward the physical assets that drive Africa's GDP.
             </p>
 
             <div class="flex flex-wrap gap-4">
-              <button class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold shadow-2xl shadow-blue-600/20 hover:bg-blue-700 hover:scale-105 transition-all">
-                View Project Portfolio
-              </button>
-              <button class="border-2 border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition-all">
-                Hardware Specs
-              </button>
+              <NuxtLink to="/contact" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold shadow-2xl shadow-blue-600/20 hover:bg-blue-700 hover:scale-105 transition-all">
+                Partner with us
+              </NuxtLink>
             </div>
           </div>
 
@@ -36,16 +33,7 @@
                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070')] bg-cover bg-center opacity-40"></div>
                <div class="relative z-10 text-center">
                   <div class="text-7xl mb-4">🤖</div>
-                  <div class="font-mono text-[10px] text-blue-400 font-bold uppercase tracking-widest">Edge Node ID: IND-TX-091</div>
-               </div>
-               
-               <div class="absolute top-10 left-10 bg-white/95 backdrop-blur p-4 rounded-2xl shadow-xl border border-blue-100 animate-float">
-                  <p class="text-[9px] font-bold text-slate-400 uppercase tracking-tighter">Motor Torque</p>
-                  <p class="text-xl font-black text-blue-600">450 Nm</p>
-               </div>
-               <div class="absolute bottom-10 right-10 bg-white/95 backdrop-blur p-4 rounded-2xl shadow-xl border border-emerald-100 animate-float-delayed">
-                  <p class="text-[9px] font-bold text-slate-400 uppercase tracking-tighter">Energy Efficiency</p>
-                  <p class="text-xl font-black text-emerald-600">Grade A++</p>
+                  <div class="font-mono text-[10px] text-blue-400 font-bold uppercase tracking-widest">Roadmap · R&amp;D stage</div>
                </div>
             </div>
           </div>
@@ -64,7 +52,7 @@
             <h3 class="text-lg font-black mb-3">{{ item.title }}</h3>
             <p class="text-xs text-slate-500 leading-relaxed mb-6">{{ item.desc }}</p>
             <div class="pt-4 border-t border-slate-100">
-              <span class="text-[9px] font-bold uppercase tracking-widest text-blue-600">Edge AI Integrated</span>
+              <span class="text-[9px] font-bold uppercase tracking-widest text-blue-600">Edge AI · Planned</span>
             </div>
           </div>
         </div>
@@ -77,16 +65,16 @@
           <div class="order-2 lg:order-1">
             <h2 class="text-4xl lg:text-6xl font-black mb-8 leading-tight">Precision <br/><span class="text-blue-500 italic">Fabrication.</span></h2>
             <p class="text-slate-400 text-lg mb-8 leading-relaxed">
-              Our facilities combine traditional craftsmanship with high-criteria robotics. We specialize in high-end wood fabrication and textile manufacturing, all monitored by IoT telemetry for zero-defect output.
+              We plan facilities that combine traditional craftsmanship with high-criteria robotics, starting with high-end wood fabrication and textile manufacturing, monitored by IoT telemetry to drive defects toward zero.
             </p>
             <div class="grid grid-cols-2 gap-4">
               <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
                 <h4 class="font-bold mb-2">Textile Automation</h4>
-                <p class="text-xs text-slate-500 italic">AxiomsAI quality control for 100% thread-count accuracy.</p>
+                <p class="text-xs text-slate-500 italic">Planned: AxiomsAI quality control for thread-count accuracy.</p>
               </div>
               <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
                 <h4 class="font-bold mb-2">Wood Engineering</h4>
-                <p class="text-xs text-slate-500 italic">Robotic CNC milling for aerospace and luxury interior grades.</p>
+                <p class="text-xs text-slate-500 italic">Planned: robotic CNC milling for high-grade interiors.</p>
               </div>
             </div>
           </div>
@@ -96,8 +84,8 @@
              <div class="absolute inset-0 bg-blue-900/20 backdrop-blur-sm"></div>
              <div class="relative h-full flex items-center justify-center">
                 <div class="text-center">
-                   <p class="text-5xl mb-4 font-black">98.4%</p>
-                   <p class="text-xs font-bold uppercase tracking-widest text-blue-400">Yield Precision</p>
+                   <p class="text-5xl mb-4 font-black">98%</p>
+                   <p class="text-xs font-bold uppercase tracking-widest text-blue-400">Target yield precision</p>
                 </div>
              </div>
           </div>

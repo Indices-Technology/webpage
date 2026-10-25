@@ -50,6 +50,7 @@ useHead({
         sameAs: [
           'https://www.linkedin.com/company/110836287',
           'https://marketx.africa',
+          'https://posta.indicestech.com',
           'https://stylex.indicestech.com',
         ],
       }),

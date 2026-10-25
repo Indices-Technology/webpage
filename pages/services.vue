@@ -192,7 +192,6 @@ useSeoMeta({
 
 const trust = [
   { value: '8+', label: 'Service types' },
-  { value: '48hr', label: 'Avg. first delivery' },
   { value: '100%', label: 'African-owned' },
   { value: 'RC7529506', label: 'Registered company' },
 ]

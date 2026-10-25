@@ -32,6 +32,11 @@
             marketx
             <Icon name="lucide:arrow-up-right" class="w-3.5 h-3.5 text-slate-400" />
           </a>
+          <a href="https://posta.indicestech.com" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-1.5 font-medium text-ink dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+            Posta
+            <Icon name="lucide:arrow-up-right" class="w-3.5 h-3.5 text-slate-400" />
+          </a>
           <NuxtLink to="/tech/axioms#architecture"
             class="font-medium text-ink dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Dasah</NuxtLink>
           <NuxtLink to="/tech/axioms"
@@ -152,6 +157,11 @@
                 <a href="https://marketx.africa" target="_blank" rel="noopener" @click="mobileMenuOpen = false"
                   class="flex items-center justify-between gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-ink dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
                   marketx
+                  <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-slate-400" />
+                </a>
+                <a href="https://posta.indicestech.com" target="_blank" rel="noopener" @click="mobileMenuOpen = false"
+                  class="flex items-center justify-between gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-ink dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                  Posta
                   <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-slate-400" />
                 </a>
                 <NuxtLink to="/tech/axioms#architecture" @click="mobileMenuOpen = false"

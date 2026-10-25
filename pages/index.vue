@@ -18,7 +18,6 @@
             <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-sm text-ink-muted dark:text-slate-400">
               <span>Registered in Nigeria — RC7529506</span>
               <span>Nigeria Startup Act Label</span>
-              <span>Trusted by 10+ organisations</span>
             </div>
           </div>
         </div>
@@ -188,22 +187,22 @@ const slides = [
   {
     sector: 'Industrial Technology & AI',
     title: 'Precision in every gear',
-    story: 'From autonomous mining sites to robotic fabrication, Axioms powers the heartbeat of African industry with intelligent automation and renewable energy systems.',
+    story: 'From autonomous mining sites to robotic fabrication, we are building Axioms to bring intelligent automation and renewable energy systems to African industry.',
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070',
     link: '/tech',
-    stat1: { value: '10K+', label: 'Automated Tasks' },
-    stat2: { value: '45%', label: 'Cost Reduction' },
-    stat3: { value: '24/7', label: 'Monitoring' }
+    stat1: { value: '10K+', label: 'Target automated tasks' },
+    stat2: { value: '45%', label: 'Target cost cut' },
+    stat3: { value: '24/7', label: 'Planned monitoring' }
   },
   {
     sector: 'Agribusiness & Export',
     title: 'Securing the harvest',
-    story: 'We connect precision farming with global export corridors, ensuring every seed reaches its highest market value through integrated biotechnology and logistics.',
+    story: 'We are building a path from precision farming to global export corridors, so more of every harvest reaches its highest market value through integrated biotechnology and logistics.',
     image: 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=2070',
     link: '/agriculture',
-    stat1: { value: '500K+', label: 'Hectares' },
-    stat2: { value: '30+', label: 'Countries' },
-    stat3: { value: '60%', label: 'Yield Increase' }
+    stat1: { value: '500K+', label: 'Target hectares' },
+    stat2: { value: '30+', label: 'Target export markets' },
+    stat3: { value: '60%', label: 'Target yield gain' }
   },
   {
     sector: 'Logistics · Posta',

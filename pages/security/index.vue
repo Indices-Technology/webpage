@@ -8,7 +8,7 @@
           <div>
             <div class="flex items-center gap-3 mb-6">
               <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 text-[10px] font-black uppercase tracking-[0.2em] border border-blue-500/30">
-                Threat Intelligence: Level 1 Secure
+                In development
               </span>
             </div>
 
@@ -18,16 +18,13 @@
             </h1>
 
             <p class="text-xl text-slate-400 leading-relaxed mb-10 max-w-xl">
-              Indices Security provides an uncompromising shield for African industry. We integrate military-grade physical protection with self-learning AI defense systems.
+              Indices Security is building a shield for African industry that pairs physical protection with AI-assisted defense systems.
             </p>
 
             <div class="flex flex-wrap gap-4">
-              <button class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold shadow-2xl shadow-blue-600/20 hover:bg-blue-500 transition-all">
-                Request Security Audit
-              </button>
-              <button class="border-2 border-white/10 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition-all">
-                Compliance Standards
-              </button>
+              <NuxtLink to="/contact" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold shadow-2xl shadow-blue-600/20 hover:bg-blue-500 transition-all">
+                Talk to us
+              </NuxtLink>
             </div>
           </div>
 
@@ -36,16 +33,7 @@
                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070')] bg-cover bg-center opacity-30"></div>
                <div class="relative z-10 text-center">
                   <div class="text-7xl mb-4 drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]">🛡️</div>
-                  <div class="font-mono text-[10px] text-blue-400 font-bold uppercase tracking-widest animate-pulse">Encryption: AES-256 Protocol</div>
-               </div>
-               
-               <div class="absolute top-10 right-10 bg-slate-900/90 backdrop-blur p-4 rounded-2xl border border-blue-500/30 animate-float">
-                  <p class="text-[9px] font-bold text-slate-500 uppercase">Cyber Shield</p>
-                  <p class="text-xl font-black text-blue-400">Active</p>
-               </div>
-               <div class="absolute bottom-10 left-10 bg-slate-900/90 backdrop-blur p-4 rounded-2xl border border-red-500/30 animate-float-delayed">
-                  <p class="text-[9px] font-bold text-slate-500 uppercase">Physical Breach</p>
-                  <p class="text-xl font-black text-red-500">Zero</p>
+                  <div class="font-mono text-[10px] text-blue-400 font-bold uppercase tracking-widest">Roadmap · R&amp;D stage</div>
                </div>
             </div>
           </div>
@@ -86,8 +74,8 @@
              <div class="flex items-center justify-center h-full">
                 <div class="text-center p-12">
                    <h4 class="text-6xl font-black text-slate-900 mb-4 tracking-tighter italic">100%</h4>
-                   <p class="text-xs font-bold uppercase tracking-[0.2em] text-blue-600">IP Data Sovereignty</p>
-                   <p class="mt-4 text-sm text-slate-500 max-w-xs mx-auto">All organizational data remains encrypted on Indices private servers.</p>
+                   <p class="text-xs font-bold uppercase tracking-[0.2em] text-blue-600">Target data sovereignty</p>
+                   <p class="mt-4 text-sm text-slate-500 max-w-xs mx-auto">Our goal: organizational data stays encrypted inside infrastructure we control.</p>
                 </div>
              </div>
           </div>
@@ -101,7 +89,7 @@
             <div class="space-y-6">
               <div class="flex gap-4">
                 <div class="text-blue-600">✔</div>
-                <p class="text-sm font-bold text-slate-700 underline decoration-blue-200 decoration-2">SOC 2 Type II Compliance Architecture</p>
+                <p class="text-sm font-bold text-slate-700 underline decoration-blue-200 decoration-2">Designed toward SOC 2-style controls</p>
               </div>
               <div class="flex gap-4">
                 <div class="text-blue-600">✔</div>
@@ -137,9 +125,9 @@ const securityStack = [
   },
   { 
     title: 'Physical Asset Defense', 
-    description: 'Specialized security for Mining, Agriculture, and Logistics sites using AI-patrol drones and high-criteria field units.', 
+    description: 'Planned: specialized security for Mining, Agriculture, and Logistics sites using AI-patrol drones and field units.',
     icon: '🚁',
-    tags: ['Drone Patrol', 'Surveillance', 'K9']
+    tags: ['Drone Patrol', 'Surveillance']
   },
   { 
     title: 'Supply Chain Integrity', 
@@ -151,7 +139,7 @@ const securityStack = [
     title: 'IP & Data Sovereignty', 
     description: 'Comprehensive protection for Axioms AI models and FinTech data layers. Ensuring proprietary secrets never leave the ecosystem.', 
     icon: '🧬',
-    tags: ['Data Privacy', 'GDPR', 'ISO 27001']
+    tags: ['Data Privacy', 'NDPA']
   }
 ]
 </script>

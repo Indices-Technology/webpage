@@ -21,33 +21,30 @@
 
             <!-- Subtitle -->
             <p class="text-lg sm:text-xl lg:text-2xl text-slate-600 leading-relaxed mb-8 sm:mb-12 max-w-3xl">
-              Engineering the specialized workforce required for Africa's industrial and digital future through world-class vocational training and certification programs.
+              Planning the specialized workforce Africa's industrial and digital future needs, through vocational training and certification programs now in design.
             </p>
 
             <!-- Actions -->
             <div class="flex flex-col sm:flex-row gap-4">
-              <button class="inline-flex items-center justify-center gap-3 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-indigo-600/20 hover:bg-indigo-700 hover:shadow-xl hover:shadow-indigo-600/30 transition-all group">
-                <span>Enroll in Academy</span>
+              <NuxtLink to="/contact" class="inline-flex items-center justify-center gap-3 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-indigo-600/20 hover:bg-indigo-700 hover:shadow-xl hover:shadow-indigo-600/30 transition-all group">
+                <span>Register interest</span>
                 <span class="group-hover:translate-x-1 transition-transform">→</span>
-              </button>
-              <button class="inline-flex items-center justify-center gap-3 border-2 border-slate-300 px-8 py-4 rounded-xl font-bold bg-white hover:border-indigo-600 hover:text-indigo-600 transition-all">
-                <span>Curriculum Standards</span>
-              </button>
+              </NuxtLink>
             </div>
 
             <!-- Stats -->
             <div class="grid grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16 pt-8 sm:pt-12 border-t border-indigo-200">
               <div>
                 <div class="text-3xl sm:text-4xl font-black text-indigo-600 mb-1 sm:mb-2">10K+</div>
-                <div class="text-xs sm:text-sm text-slate-500 uppercase tracking-wider">Graduates</div>
+                <div class="text-xs sm:text-sm text-slate-500 uppercase tracking-wider">Target graduates</div>
               </div>
               <div>
                 <div class="text-3xl sm:text-4xl font-black text-indigo-600 mb-1 sm:mb-2">95%</div>
-                <div class="text-xs sm:text-sm text-slate-500 uppercase tracking-wider">Employment Rate</div>
+                <div class="text-xs sm:text-sm text-slate-500 uppercase tracking-wider">Target employment rate</div>
               </div>
               <div>
                 <div class="text-3xl sm:text-4xl font-black text-indigo-600 mb-1 sm:mb-2">50+</div>
-                <div class="text-xs sm:text-sm text-slate-500 uppercase tracking-wider">Certifications</div>
+                <div class="text-xs sm:text-sm text-slate-500 uppercase tracking-wider">Target certifications</div>
               </div>
             </div>
           </div>
@@ -102,7 +99,7 @@
               </h2>
 
               <p class="text-base sm:text-lg text-slate-600 mb-8 leading-relaxed">
-                Our training methodology combines hands-on workshops, industry mentorship, and cutting-edge simulation technology to ensure graduates are job-ready from day one.
+                The planned methodology combines hands-on workshops, industry mentorship, and simulation technology so graduates are job-ready from day one.
               </p>
 
               <div class="space-y-4">
@@ -112,7 +109,7 @@
                   </div>
                   <div>
                     <h4 class="font-bold text-slate-900 mb-1 text-sm sm:text-base">Hands-On Workshops</h4>
-                    <p class="text-xs sm:text-sm text-slate-600">State-of-the-art facilities with real industrial equipment and tools.</p>
+                    <p class="text-xs sm:text-sm text-slate-600">Training on real industrial equipment and tools.</p>
                   </div>
                 </div>
 
@@ -235,13 +232,10 @@
           </p>
           
           <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <button class="group inline-flex items-center justify-center gap-3 bg-white text-indigo-600 px-10 py-5 rounded-xl font-bold hover:bg-indigo-50 transition-all shadow-2xl">
-              <span>Enroll Today</span>
-              <span class="group-hover:translate-x-1 transition-transform">→</span>
-            </button>
-            <button class="inline-flex items-center justify-center gap-3 border-2 border-white/30 text-white px-10 py-5 rounded-xl font-bold hover:bg-white/10 transition-all backdrop-blur-sm">
+            <NuxtLink to="/contact" class="group inline-flex items-center justify-center gap-3 bg-white text-indigo-600 px-10 py-5 rounded-xl font-bold hover:bg-indigo-50 transition-all shadow-2xl">
               <span>Partner with Us</span>
-            </button>
+              <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </NuxtLink>
           </div>
 
           <div class="grid grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16 pt-12 sm:pt-16 border-t border-white/20">
@@ -255,7 +249,7 @@
             </div>
             <div>
               <div class="text-3xl sm:text-4xl font-black text-white mb-2">₦250K</div>
-              <div class="text-xs sm:text-sm text-indigo-200">Avg. Starting Salary</div>
+              <div class="text-xs sm:text-sm text-indigo-200">Target starting salary</div>
             </div>
           </div>
         </div>

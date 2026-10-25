@@ -81,6 +81,7 @@ const columns = [
     heading: 'Products',
     links: [
       { label: 'marketx', to: 'https://marketx.africa', external: true },
+      { label: 'Posta', to: 'https://posta.indicestech.com', external: true },
       { label: 'Dasah', to: '/tech/axioms#architecture' },
       { label: 'Axioms', to: '/tech/axioms' },
     ],

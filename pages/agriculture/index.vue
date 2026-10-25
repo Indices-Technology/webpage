@@ -8,7 +8,7 @@
           <div>
             <div class="flex items-center gap-3 mb-6">
               <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-black uppercase tracking-widest">
-                System Status: Optimal
+                In development
               </span>
             </div>
 
@@ -18,16 +18,13 @@
             </h1>
 
             <p class="text-xl text-slate-600 leading-relaxed mb-10 max-w-xl">
-              Indices Agribusiness fuses biological science with digital infrastructure. We use green technology to secure Africa’s food future.
+              Indices Agribusiness is building at the meeting point of biological science and digital infrastructure, using green technology to help secure Africa’s food future.
             </p>
 
             <div class="flex flex-wrap gap-4">
-              <button class="bg-emerald-600 text-white px-8 py-4 rounded-xl font-bold shadow-2xl shadow-emerald-600/20 hover:bg-emerald-700 hover:scale-105 transition-all">
-                Launch Agri-Dashboard
-              </button>
-              <button class="border-2 border-emerald-200 text-emerald-700 px-8 py-4 rounded-xl font-bold hover:bg-emerald-50 transition-all">
-                Download ESG Report
-              </button>
+              <NuxtLink to="/contact" class="bg-emerald-600 text-white px-8 py-4 rounded-xl font-bold shadow-2xl shadow-emerald-600/20 hover:bg-emerald-700 hover:scale-105 transition-all">
+                Partner with us
+              </NuxtLink>
             </div>
           </div>
 
@@ -36,12 +33,12 @@
                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=2074')] bg-cover bg-center opacity-40 group-hover:scale-110 transition-transform duration-700"></div>
                <div class="relative z-10 text-center p-8">
                   <div class="text-6xl mb-4 animate-pulse">📡</div>
-                  <div class="font-mono text-[10px] text-emerald-400 tracking-tighter uppercase">Axioms AI Analytics: 0.04ms Latency</div>
+                  <div class="font-mono text-[10px] text-emerald-400 tracking-tighter uppercase">Axioms AI Analytics · Planned</div>
                </div>
-               
+
                <div class="absolute top-10 right-10 bg-white/95 backdrop-blur p-4 rounded-2xl shadow-xl border border-emerald-100 animate-float">
-                  <p class="text-[10px] font-bold text-slate-400 uppercase">Yield Velocity</p>
-                  <p class="text-xl font-black text-emerald-600">+24.8%</p>
+                  <p class="text-[10px] font-bold text-slate-400 uppercase">Target yield gain</p>
+                  <p class="text-xl font-black text-emerald-600">+25%</p>
                </div>
             </div>
           </div>
@@ -85,7 +82,7 @@
                 <div class="text-emerald-500 text-2xl font-mono">0{{ i+1 }}</div>
                 <div>
                   <h4 class="font-bold text-xl mb-1">{{ step }}</h4>
-                  <p class="text-emerald-100/60 text-sm">Automated precision metrics integrated into our core Axioms AI infrastructure.</p>
+                  <p class="text-emerald-100/60 text-sm">Automated precision metrics, planned to run on our core Axioms AI infrastructure.</p>
                 </div>
               </div>
             </div>
@@ -131,7 +128,7 @@ const agriTechStack = [
   },
   { 
     title: 'Cold Chain IoT', 
-    description: 'Global transparency through 5G-enabled temperature-controlled container networks.', 
+    description: 'Planned: end-to-end visibility through connected, temperature-controlled container networks.',
     icon: '❄️',
     tags: ['5G', 'Logistics']
   }
