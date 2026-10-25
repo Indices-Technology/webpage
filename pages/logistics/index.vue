@@ -1,116 +1,235 @@
 <template>
-  <main class="bg-slate-50">
-    <section class="relative bg-white overflow-hidden border-b border-red-100">
-      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgY3g9IjMiIGN5PSIzIiByPSIxIiBmaWxsPSJyZ2JhKDIzOSw2OCw2OCwwLjEpIi8+PC9nPjwvc3ZnPg==')] opacity-100"></div>
-      
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 lg:py-32">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div class="flex items-center gap-3 mb-6">
-              <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-[10px] font-black uppercase tracking-widest">
-                Fleet Status: Active & Optimized
-              </span>
-            </div>
+  <main class="bg-white dark:bg-slate-950">
+    <!-- Hero -->
+    <section class="border-b border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-20 lg:pt-40 lg:pb-28">
+        <div class="grid lg:grid-cols-12 gap-16 items-center">
+          <div class="lg:col-span-6">
+            <p class="label mb-6">Logistics · Posta</p>
 
-            <h1 class="text-5xl lg:text-8xl font-black text-slate-900 leading-[0.9] tracking-tighter mb-8">
-              Velocity <br/>
-              <span class="text-red-600 font-serif italic text-6xl lg:text-8xl">Unbound.</span>
-            </h1>
+            <h1 class="text-5xl lg:text-6xl leading-[1.02] tracking-[-0.035em] mb-6">Posta</h1>
 
-            <p class="text-xl text-slate-600 leading-relaxed mb-10 max-w-xl">
-              Indices Logistics is the circulatory system of the group. We integrate autonomous fleet management with smart cold-chain infrastructure to move Africa at global speeds.
+            <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl mb-4">
+              A logistics aggregator built on Nigeria's national postcode network. Parcels ride on trips people are
+              already making, partner shops hand them on, and local couriers finish the last mile.
+            </p>
+            <p class="text-slate-500 dark:text-slate-500 leading-relaxed max-w-xl mb-10">
+              For people sending a parcel, and for businesses that want delivery handled for them.
+              <a href="https://marketx.africa" target="_blank" rel="noopener"
+                class="text-ink dark:text-white border-b border-slate-300 hover:border-ink transition-colors">MarketX</a>
+              is the first business client.
             </p>
 
-            <div class="flex flex-wrap gap-4">
-              <button class="bg-red-600 text-white px-8 py-4 rounded-xl font-bold shadow-2xl shadow-red-600/20 hover:bg-red-700 hover:scale-105 transition-all">
-                Track Global Shipment
-              </button>
-              <button class="border-2 border-red-200 text-red-700 px-8 py-4 rounded-xl font-bold hover:bg-red-50 transition-all">
-                Compliance & Customs
-              </button>
+            <div class="flex flex-wrap gap-3">
+              <a v-if="postaLive" :href="POSTA_URL" class="btn-primary">
+                Open Posta
+                <Icon name="lucide:arrow-right" class="w-4 h-4" />
+              </a>
+              <NuxtLink v-else to="/contact" class="btn-primary">
+                Join the pilot
+                <Icon name="lucide:arrow-right" class="w-4 h-4" />
+              </NuxtLink>
+              <a href="#connect" class="btn-secondary">Connect your business</a>
             </div>
           </div>
 
-          <div class="relative group">
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-red-50 bg-slate-900 aspect-square flex items-center justify-center">
-               <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070')] bg-cover bg-center opacity-50 group-hover:scale-110 transition-transform duration-700"></div>
-               <div class="relative z-10 text-center p-8">
-                  <div class="text-6xl mb-4 animate-pulse">🚚</div>
-                  <div class="font-mono text-[10px] text-red-400 tracking-tighter uppercase italic font-bold">Axioms AI Route Optimization: Active</div>
-               </div>
-               
-               <div class="absolute top-10 right-10 bg-white/95 backdrop-blur p-4 rounded-2xl shadow-xl border border-red-100 animate-float">
-                  <p class="text-[10px] font-bold text-slate-400 uppercase">On-Time Delivery</p>
-                  <p class="text-xl font-black text-red-600">99.8%</p>
-               </div>
-               <div class="absolute bottom-10 left-10 bg-white/95 backdrop-blur p-4 rounded-2xl shadow-xl border border-blue-100 animate-float-delayed">
-                  <p class="text-[10px] font-bold text-slate-400 uppercase">Fleet Idle Time</p>
-                  <p class="text-xl font-black text-blue-600">-14.2%</p>
-               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-24 px-6 bg-white">
-      <div class="max-w-7xl mx-auto">
-        <div class="mb-16">
-          <h2 class="text-4xl font-black tracking-tight mb-4">Integrated <span class="text-red-600 italic">Supply Chain.</span></h2>
-          <p class="text-slate-500 max-w-2xl leading-relaxed">High-criteria logistics engineered for the Agribusiness and Industrial Tech sectors.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div v-for="item in logisticsStack" :key="item.title" 
-            class="group p-8 rounded-3xl border-2 border-slate-50 bg-slate-50/50 hover:bg-white hover:border-red-200 hover:shadow-2xl transition-all duration-500">
-            <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-red-600 group-hover:text-white transition-all">
-              {{ item.icon }}
-            </div>
-            <h3 class="text-xl font-black mb-3">{{ item.title }}</h3>
-            <p class="text-sm text-slate-600 leading-relaxed mb-6">{{ item.description }}</p>
-            <div class="pt-6 border-t border-slate-200 flex flex-wrap gap-2">
-              <span v-for="tag in item.tags" :key="tag" class="text-[9px] font-bold uppercase tracking-widest px-2 py-1 bg-red-50 text-red-600 rounded">
-                {{ tag }}
-              </span>
+          <!-- One real journey, not a dashboard of invented numbers -->
+          <div class="lg:col-span-6">
+            <div class="card overflow-hidden hover:border-slate-200 dark:hover:border-slate-800">
+              <div class="flex items-center justify-between px-5 py-3 border-b border-slate-100 dark:border-slate-800">
+                <p class="label">Parcel #1001 · Jos to Lagos</p>
+                <span class="font-mono text-[11px] text-slate-400">every handover proven</span>
+              </div>
+              <ol class="p-5 space-y-5">
+                <li v-for="(stop, i) in journey" :key="stop.title" class="flex gap-4">
+                  <div class="flex flex-col items-center">
+                    <span class="w-8 h-8 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center">
+                      <Icon :name="stop.icon" class="w-4 h-4 text-slate-500" />
+                    </span>
+                    <span v-if="i < journey.length - 1" class="w-px flex-1 bg-slate-200 dark:bg-slate-800 mt-1" />
+                  </div>
+                  <div class="pb-1">
+                    <p class="font-medium text-sm">{{ stop.title }}</p>
+                    <p class="font-mono text-xs text-slate-500 mt-0.5">{{ stop.where }}</p>
+                    <p class="text-xs text-slate-500 mt-1">{{ stop.proof }}</p>
+                  </div>
+                </li>
+              </ol>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-24 bg-slate-900 text-white overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 class="text-4xl lg:text-6xl font-black mb-8 leading-tight">Intelligent <br/><span class="text-red-500">Infrastructure.</span></h2>
-            
-            <div class="space-y-8">
-              <div v-for="(step, i) in ['Predictive Maintenance', 'Blockchain Compliance', 'Cross-Border 5G']" :key="i" class="flex gap-6 items-start">
-                <div class="text-red-500 text-2xl font-mono">0{{ i+1 }}</div>
-                <div>
-                  <h4 class="font-bold text-xl mb-1">{{ step }}</h4>
-                  <p class="text-slate-400 text-sm">Automating the physical movement of goods with the same precision as our software code.</p>
-                </div>
+    <!-- How it works -->
+    <section class="border-b border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-24">
+        <div class="max-w-2xl mb-14">
+          <p class="label mb-5">How it works</p>
+          <h2 class="text-3xl sm:text-4xl mb-5 leading-[1.1]">Two legs, one parcel</h2>
+          <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+            Posta does not run a fleet. It matches parcels to trips already happening between cities, then hands
+            them to couriers for the last stretch. Nobody needs to see the whole network: each person sees only
+            what to collect, where, by when, and how to prove it.
+          </p>
+        </div>
+
+        <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+          <li v-for="(step, i) in steps" :key="step.title" class="bg-white dark:bg-slate-950 p-6">
+            <p class="font-mono text-xs text-slate-400 mb-6">0{{ i + 1 }}</p>
+            <Icon :name="step.icon" class="w-5 h-5 text-brand-600 dark:text-brand-400 mb-4" />
+            <h3 class="text-lg mb-2">{{ step.title }}</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{{ step.desc }}</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Proof + postcode -->
+    <section class="border-b border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-24 grid lg:grid-cols-2 gap-16">
+        <div>
+          <p class="label mb-5">Proof at every handover</p>
+          <h2 class="text-3xl sm:text-4xl mb-5 leading-[1.1]">The receiver holds the code</h2>
+          <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+            Whoever receives the parcel reads a six-digit code to whoever hands it over. A carrier can only have
+            that code if they stood in front of the right person, so every step is recorded with who, where and when.
+          </p>
+          <ul class="divide-y divide-slate-200 dark:divide-slate-800 border-y border-slate-200 dark:border-slate-800">
+            <li v-for="rule in proofRules" :key="rule" class="flex gap-3 py-4 text-sm text-slate-600 dark:text-slate-400">
+              <Icon name="lucide:check" class="w-4 h-4 mt-0.5 shrink-0 text-brand-600 dark:text-brand-400" />
+              {{ rule }}
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="label mb-5">Built on the national postcode</p>
+          <h2 class="text-3xl sm:text-4xl mb-5 leading-[1.1]">Down to the building</h2>
+          <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+            Every pickup, centre and delivery point is a national postcode, checked against the official registry.
+            No more "behind the big church".
+          </p>
+          <div class="card p-6 hover:border-slate-200 dark:hover:border-slate-800">
+            <div class="grid grid-cols-5 gap-2 text-center">
+              <div v-for="seg in postcode" :key="seg.part">
+                <p class="font-mono text-2xl sm:text-3xl font-semibold tracking-tight">{{ seg.part }}</p>
+                <p class="label mt-2 !tracking-normal normal-case">{{ seg.means }}</p>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="relative bg-white/5 rounded-3xl p-8 border border-white/10 aspect-square flex items-center justify-center overflow-hidden">
-             
-             <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
-             <div class="relative z-10 text-center">
-                <div class="grid grid-cols-2 gap-4">
-                   <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
-                      <p class="text-red-500 font-black text-2xl">48hr</p>
-                      <p class="text-[10px] uppercase text-slate-400">Avg Cross-Border</p>
-                   </div>
-                   <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
-                      <p class="text-red-500 font-black text-2xl">0%</p>
-                      <p class="text-[10px] uppercase text-slate-400">Cold Chain Loss</p>
-                   </div>
-                </div>
-             </div>
+    <!-- Who it's for -->
+    <section class="border-b border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-24">
+        <div class="max-w-2xl mb-14">
+          <p class="label mb-5">The network</p>
+          <h2 class="text-3xl sm:text-4xl leading-[1.1]">Who Posta works with</h2>
+        </div>
+
+        <dl class="grid md:grid-cols-2 gap-x-16 divide-y divide-slate-200 dark:divide-slate-800 border-y border-slate-200 dark:border-slate-800 md:divide-y-0">
+          <div v-for="who in network" :key="who.title"
+            class="flex gap-5 py-6 md:border-b md:border-slate-200 md:dark:border-slate-800">
+            <Icon :name="who.icon" class="w-5 h-5 mt-0.5 shrink-0 text-slate-400" />
+            <div>
+              <dt class="font-semibold mb-1.5">{{ who.title }}</dt>
+              <dd class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{{ who.desc }}</dd>
+            </div>
           </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Axioms + third parties -->
+    <section id="connect" class="bg-ink text-white scroll-mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-24">
+        <div class="max-w-2xl mb-14">
+          <p class="label !text-slate-500 mb-5">Connect</p>
+          <h2 class="text-3xl sm:text-4xl mb-5 leading-[1.1]">Two doors into Posta</h2>
+          <p class="text-lg text-slate-400 leading-relaxed">
+            Posta is a provider on
+            <NuxtLink to="/tech/axioms" class="text-white border-b border-white/30 hover:border-white transition-colors">Axioms</NuxtLink>,
+            the shared layer through which Indices systems publish what they can do. Businesses can connect
+            directly, and AI assistants such as Dasah reach Posta through Axioms.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-6 items-start mb-14">
+          <div class="rounded-xl border border-white/10 p-8 overflow-x-auto">
+            <pre class="font-mono text-xs leading-[1.9] text-slate-400"><span class="text-white">Clients</span>
+ MarketX · any business
+ Dasah · apps · AI agents
+      │              │
+ <span class="text-white">Posta API</span>        <span class="text-white">Axioms</span>
+ API keys       capabilities
+ webhooks       identity
+      │         events
+      └──────┬───────┘
+             ▼
+           <span class="text-white">Posta</span>
+ travellers · couriers
+ fulfilment centres
+ GIG, DHL <span class="text-slate-600">(planned)</span></pre>
+          </div>
+
+          <dl class="divide-y divide-white/5 border-y border-white/5">
+            <div v-for="door in doors" :key="door.title" class="flex gap-5 py-6">
+              <Icon :name="door.icon" class="w-5 h-5 mt-0.5 shrink-0 text-slate-500" />
+              <div>
+                <dt class="font-semibold mb-1.5">{{ door.title }}</dt>
+                <dd class="text-sm text-slate-400 leading-relaxed">{{ door.desc }}</dd>
+              </div>
+            </div>
+          </dl>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-px bg-white/5 border border-white/5 rounded-xl overflow-hidden">
+          <div class="bg-ink p-6">
+            <p class="label !text-brand-400 mb-5">Available now</p>
+            <ul class="space-y-2.5">
+              <li v-for="cap in capabilitiesNow" :key="cap.name" class="font-mono text-xs">
+                <span class="text-white">{{ cap.name }}</span>
+                <span class="text-slate-500"> · {{ cap.does }}</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-ink p-6">
+            <p class="label !text-slate-500 mb-5">Next</p>
+            <ul class="space-y-2.5">
+              <li v-for="cap in capabilitiesNext" :key="cap.name" class="font-mono text-xs">
+                <span class="text-slate-300">{{ cap.name }}</span>
+                <span class="text-slate-600"> · {{ cap.does }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-sm text-slate-500 mt-6 max-w-2xl">
+          Actions that move money or commit a delivery, such as booking, ask the person to confirm first.
+          Answers never include handover codes or carriers' phone numbers.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-24 grid lg:grid-cols-12 gap-10 items-end">
+        <div class="lg:col-span-8">
+          <p class="label mb-5">Pilot</p>
+          <h2 class="text-3xl sm:text-4xl mb-4 leading-[1.1]">Deliver with us, or deliver through us</h2>
+          <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
+            We are opening Posta city by city. Travellers, couriers, courier companies, shops that want to be
+            fulfilment centres, and businesses that need deliveries can join the pilot now.
+          </p>
+        </div>
+        <div class="lg:col-span-4 flex flex-wrap gap-3 lg:justify-end">
+          <NuxtLink to="/contact" class="btn-primary">
+            Talk to us
+            <Icon name="lucide:arrow-right" class="w-4 h-4" />
+          </NuxtLink>
+          <NuxtLink to="/tech/axioms" class="btn-secondary">About Axioms</NuxtLink>
         </div>
       </div>
     </section>
@@ -118,58 +237,84 @@
 </template>
 
 <script setup>
+// Flip postaLive to true once posta.indicestech.com is serving (see posta/docs/HOSTING.md).
+const POSTA_URL = 'https://posta.indicestech.com'
+const postaLive = false
+
 useSeoMeta({
-  title: 'Logistics',
-  ogTitle: 'Logistics — Indices Technology LTD',
-  description: 'Indices Logistics arm delivers smart cold chain systems, fleet automation, customs technology, and warehouse robotics to modernise African supply chains.',
-  ogDescription: 'Smart cold chain, fleet automation, customs tech, and warehouse robotics — Indices Logistics.',
+  title: 'Posta · Logistics',
+  ogTitle: 'Posta: logistics on the national postcode network · Indices Technology LTD',
+  description:
+    'Posta is a logistics aggregator built on Nigeria\'s national postcode network. Parcels ride on trips already happening, partner shops hand them on, and couriers finish the last mile, with proof at every handover.',
+  ogDescription:
+    'Parcels ride on trips already happening, with proof at every handover. Built on the national postcode. Connects through Axioms.',
   ogUrl: 'https://indicestech.com/logistics',
 })
 
-const logisticsStack = [
-  { 
-    title: 'Smart Cold Chain', 
-    description: 'Autonomous temperature tracking for high-value perishables. Integrated with Agri arm exports.', 
-    icon: '❄️',
-    tags: ['IoT', 'Cold Chain', 'Agri-Link']
+const journey = [
+  { icon: 'lucide:package', title: 'Booked in Jos', where: 'PL-01-A01-TM-01', proof: 'Matched to John, already driving to Lagos' },
+  { icon: 'lucide:car', title: 'Collected by John', where: 'Terminus, Jos', proof: 'Sender read John the pickup code' },
+  { icon: 'lucide:store', title: 'At a Lagos fulfilment centre', where: 'LA-02-A01-YB-01', proof: 'Shop read John the handover code' },
+  { icon: 'lucide:bike', title: 'Delivered by a courier', where: 'Recipient\'s door', proof: 'Recipient read the courier their code' },
+]
+
+const steps = [
+  { icon: 'lucide:map-pin', title: 'Book with a postcode', desc: 'Sender, recipient, what it is and its size. The pickup and delivery points are national postcodes.' },
+  { icon: 'lucide:route', title: 'Matched to a trip', desc: 'The first traveller going the same way with room takes it. They get one link on WhatsApp: no app, no account.' },
+  { icon: 'lucide:store', title: 'Handed to a centre', desc: 'A partner shop near the recipient receives it and confirms with its code.' },
+  { icon: 'lucide:bike', title: 'Last mile by a courier', desc: 'The least busy approved courier in the city takes it to the door. The recipient tracks it from a link.' },
+]
+
+const proofRules = [
+  'The code can only come from the person receiving the parcel.',
+  'Five wrong codes lock the job and alert Posta staff.',
+  'The recipient\'s code is on their tracking page, never in the carrier\'s link.',
+  'Each step is stamped with the postcode, the time and who did it.',
+]
+
+const postcode = [
+  { part: 'FC', means: 'State' },
+  { part: '01', means: 'LGA' },
+  { part: 'A01', means: 'District' },
+  { part: 'KP', means: 'Area' },
+  { part: '27', means: 'Building' },
+]
+
+const network = [
+  { icon: 'lucide:package', title: 'People sending parcels', desc: 'Book in a few taps, share a tracking link with the recipient on WhatsApp.' },
+  { icon: 'lucide:building-2', title: 'Businesses', desc: 'Hand Posta your deliveries through the API. You keep your own checkout and payments; Posta handles the movement. MarketX is first.' },
+  { icon: 'lucide:car', title: 'Travellers', desc: 'Already driving between cities? Post the trip and carry parcels going your way.' },
+  { icon: 'lucide:bike', title: 'Couriers', desc: 'On a bike, car or van. Apply, get approved, receive jobs in your city.' },
+  { icon: 'lucide:truck', title: 'Courier companies', desc: 'Your riders take Posta jobs. Receive them on WhatsApp, or in your own system through signed webhooks.' },
+  { icon: 'lucide:store', title: 'Fulfilment centres', desc: 'Shops that receive and hand on parcels. Register from the shop in one minute; Posta staff approve.' },
+]
+
+const doors = [
+  {
+    icon: 'lucide:key-round',
+    title: 'Posta API, for businesses',
+    desc: 'Get prices, book, track. Updates arrive as signed webhooks your system can verify. The same API MarketX uses: no private shortcuts.',
   },
-  { 
-    title: 'Fleet Automation', 
-    description: 'Proprietary Axioms AI algorithms for fuel reduction and dynamic route optimization.', 
-    icon: '🚛',
-    tags: ['AI', 'Fleet Management']
+  {
+    icon: 'lucide:network',
+    title: 'Through Axioms, for assistants and apps',
+    desc: 'Posta publishes capabilities on Axioms. Dasah, and approved third-party apps and AI agents, call them on a person\'s behalf, with that person\'s identity and consent.',
   },
-  { 
-    title: 'Customs Tech', 
-    description: 'Digitized trade compliance and automated customs clearance for African corridors.', 
-    icon: '🛂',
-    tags: ['TradeTech', 'Compliance']
+  {
+    icon: 'lucide:webhook',
+    title: 'For courier companies',
+    desc: 'Jobs arrive as signed webhooks. Your riders open the job link and prove each handover with the same codes as everyone else.',
   },
-  { 
-    title: 'Warehouse Robotics', 
-    description: 'IoT-enabled sorting and retrieval systems within Indices Real Estate hubs.', 
-    icon: '🏗️',
-    tags: ['Robotics', 'Real Estate']
-  }
+]
+
+const capabilitiesNow = [
+  { name: 'posta.list_parcels@1', does: 'my parcels and where each one is' },
+  { name: 'posta.get_parcel_status@1', does: '"has my parcel been handed over?"' },
+]
+
+const capabilitiesNext = [
+  { name: 'posta.quote@1', does: 'price a delivery between two postcodes' },
+  { name: 'posta.book_shipment@1', does: 'book it, after the person confirms' },
+  { name: 'events', does: 'parcel.matched · handover.completed · parcel.delivered' },
 ]
 </script>
-
-<style scoped>
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-}
-
-@keyframes float-delayed {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-.animate-float {
-  animation: float 4s ease-in-out infinite;
-}
-
-.animate-float-delayed {
-  animation: float-delayed 4s ease-in-out infinite 1s;
-}
-</style>

@@ -38,7 +38,7 @@
           <ul class="space-y-3 text-sm">
             <li v-for="link in col.links" :key="link.label">
               <component
-                :is="link.external ? 'a' : resolveComponent('NuxtLink')"
+                :is="link.external ? 'a' : NuxtLink"
                 v-bind="link.external
                   ? { href: link.to, target: '_blank', rel: 'noopener' }
                   : { to: link.to }"
@@ -68,7 +68,11 @@
 </template>
 
 <script setup>
-import { computed, resolveComponent } from 'vue'
+import { computed } from 'vue'
+
+// Resolved here, at build time. Calling resolveComponent from the template ran it at render
+// time, where Nuxt has not registered NuxtLink, so every internal footer link rendered dead.
+const NuxtLink = resolveComponent('NuxtLink')
 
 const currentYear = computed(() => new Date().getFullYear())
 

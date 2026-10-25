@@ -206,14 +206,14 @@ const slides = [
     stat3: { value: '60%', label: 'Yield Increase' }
   },
   {
-    sector: 'Logistics & Supply Chain',
-    title: 'Africa without borders',
-    story: 'Automated cold chains and intelligent fleet management, moving commodities across the continent in record time with real-time tracking and optimization.',
+    sector: 'Logistics · Posta',
+    title: 'Parcels ride on trips already happening',
+    story: 'Posta is a logistics aggregator built on the national postcode network. Travellers carry parcels between cities, partner shops hand them on, and couriers finish the last mile, with proof at every handover.',
     image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2070',
     link: '/logistics',
-    stat1: { value: '48hr', label: 'Cross-Border' },
-    stat2: { value: '99.8%', label: 'On-Time Rate' },
-    stat3: { value: '15', label: 'African States' }
+    stat1: { value: '37', label: 'States on the postcode' },
+    stat2: { value: '6-digit', label: 'Proof per handover' },
+    stat3: { value: 'MarketX', label: 'First client' }
   }
 ]
 
@@ -241,8 +241,8 @@ const matrix = [
     icon: 'lucide:truck',
     accent: 'text-red-600 dark:text-red-500',
     path: '/logistics',
-    desc: 'Automated cold chain networks and intelligent cross-border trade.',
-    tags: ['Fleet', 'Cold Chain', 'Customs'],
+    desc: 'Posta: parcel delivery on the national postcode network, for people and businesses.',
+    tags: ['Postcode', 'Last mile', 'API'],
     index: '03'
   },
   {

@@ -105,7 +105,7 @@
    └── <span class="text-white">Dasah</span>  <span class="text-slate-600">— conversational layer</span>
         │
         ├── MarketX
-        ├── Logistics
+        ├── Posta (logistics)
         ├── Security
         ├── IoT
         ├── Edge systems
@@ -317,7 +317,7 @@ useSeoMeta({
 const traceCalls = [
   'marketx.get_order',
   'marketx.get_seller',
-  'logistics.track_delivery',
+  'posta.get_parcel_status',
 ]
 
 const architectureLayers = [
@@ -334,13 +334,13 @@ const architectureLayers = [
   {
     title: 'Clients — the platforms',
     icon: 'lucide:plug',
-    desc: 'MarketX, logistics, security, IoT and edge systems connect as clients. MarketX is the first major use case for Dasah, not its owner — new platforms plug in without rebuilding it.'
+    desc: 'MarketX, Posta, security, IoT and edge systems connect as clients. MarketX is the first major use case for Dasah, not its owner — new platforms plug in without rebuilding it.'
   }
 ]
 
 const capabilities = [
   { namespace: 'marketx.*',   icon: 'lucide:shopping-cart', tools: ['get_order', 'get_seller', 'get_trust_score'] },
-  { namespace: 'logistics.*', icon: 'lucide:truck',         tools: ['track_delivery', 'get_route', 'assign_dispatch'] },
+  { namespace: 'posta.*',     icon: 'lucide:truck',         tools: ['list_parcels', 'get_parcel_status', 'book_shipment'] },
   { namespace: 'security.*',  icon: 'lucide:shield',        tools: ['get_alerts', 'get_incident', 'verify_access'] },
   { namespace: 'iot.*',       icon: 'lucide:radio',         tools: ['get_sensor', 'list_devices', 'set_threshold'] },
   { namespace: 'edge.*',      icon: 'lucide:cpu',           tools: ['get_device_status', 'deploy_model', 'sync_state'] },
@@ -351,7 +351,7 @@ const events = [
   'order.completed',
   'seller.verified',
   'payment.completed',
-  'delivery.updated',
+  'handover.completed',
   'device.alert',
   'trust.score.changed'
 ]
